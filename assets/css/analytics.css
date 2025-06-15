@@ -1,0 +1,17 @@
+/* File: assets/css/analytics.css */
+/*
+ * Page-specific styles for the Analytics page.
+ *
+ * Add your custom CSS rules here to customize the Analytics page layout and appearance.
+ * These styles will be loaded after core.css, allowing you to override default styles.
+ *
+ * Ensure all custom styles are well-commented and do not use subjective terms.
+ */
+
+/* Example: Customize a specific card on the Analytics page */
+/*
+.analytics-page .card.your-custom-card {
+    background-color: #f0f8ff;
+    border: 1px solid #add8e6;
+}
+*/

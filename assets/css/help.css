@@ -1,0 +1,16 @@
+/* File: assets/css/help.css */
+/*
+ * Page-specific styles for the Help page.
+ *
+ * Add your custom CSS rules here to customize the Help page layout and appearance.
+ * These styles will be loaded after core.css, allowing you to override default styles.
+ *
+ * Ensure all custom styles are well-commented and do not use subjective terms.
+ */
+
+/* Example: Customize FAQ accordion styling */
+/*
+.help-page .faq-item.active .faq-question {
+    background-color: #ecf0f1;
+}
+*/

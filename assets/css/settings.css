@@ -1,0 +1,16 @@
+/* File: assets/css/settings.css */
+/*
+ * Page-specific styles for the Settings page.
+ *
+ * Add your custom CSS rules here to customize the Settings page layout and appearance.
+ * These styles will be loaded after core.css, allowing you to override default styles.
+ *
+ * Ensure all custom styles are well-commented and do not use subjective terms.
+ */
+
+/* Example: Style for specific settings sections */
+/*
+.settings-page #security-settings .form-group label {
+    color: #c0392b;
+}
+*/

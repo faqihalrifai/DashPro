@@ -1,0 +1,19 @@
+/* File: assets/css/products.css */
+/*
+ * Page-specific styles for the Products page.
+ *
+ * Add your custom CSS rules here to customize the Products page layout and appearance.
+ * These styles will be loaded after core.css, allowing you to override default styles.
+ *
+ * Ensure all custom styles are well-commented and do not use subjective terms.
+ */
+
+/* Example: Style for product images in the table if any are directly displayed */
+/*
+.products-page .product-image-thumbnail {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+*/
