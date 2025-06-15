@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashPro Admin Panel Template Documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Basic Styles for Documentation Page Itself */
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fb;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        h1, h2, h3, h4 {
+            color: #5a67d8;
+            margin-bottom: 15px;
+        }
+        h1 { font-size: 2.5em; text-align: center; margin-bottom: 30px; }
+        h2 { font-size: 2em; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; margin-top: 40px; }
+        h3 { font-size: 1.5em; margin-top: 30px; }
+        ul {
+            list-style: disc;
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        ol {
+            list-style: decimal;
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        code {
+            background-color: #f0f0f0;
+            padding: 2px 5px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9em;
+        }
+        pre {
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-radius: 4px;
+            overflow-x: auto;
+            margin-bottom: 20px;
+        }
+        .note {
+            background-color: #e6f7ff;
+            border-left: 4px solid #3182ce;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .warning {
+            background-color: #fff3e0;
+            border-left: 4px solid #ed8936;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .text-center {
+            text-align: center;
+        }
+        /* Specific styles for icons in documentation */
+        .icon-example {
+            color: #5a67d8; /* Primary color */
+            font-size: 1.1em;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>DashPro Admin Panel Template Documentation</h1>
+        <p class="text-center">Welcome to DashPro, a modern admin panel template designed for ease of use and customization. This documentation will guide you through the installation process, feature usage, as well as customization and troubleshooting tips. Ensure your template is always up-to-date by regularly checking for updates.</p>
+
+        <p class="text-center"><strong>Product Name:</strong> DashPro - Modern Admin Panel Dashboard</p>
+        <p class="text-center"><strong>Version:</strong> 1.0.0</p>
+        <p class="text-center"><strong>Author:</strong> Muhammad Faqih Al Rifai/Dash Pro</p>
+        <p class="text-center"><strong>Last Updated:</strong> June 14, 2025</p>
+
+        <h2>1. Product Overview</h2>
+        <p>DashPro is a sleek, modern, and fully responsive admin panel dashboard template. It is meticulously designed for a wide range of backend applications, administrative dashboards, and control panels. Built with clean, well-structured HTML, highly customizable CSS (utilizing custom CSS variables for effortless theming), and modular JavaScript (including the powerful Chart.js library), DashPro ensures a consistent, interactive, and visually appealing user experience across all devices and screen sizes.</p>
+        <p><strong>Key Features & Highlights:</strong></p>
+        <ul>
+            <li><strong>Clean and Modern Design:</strong> A contemporary aesthetic that adheres to current UI/UX trends.</li>
+            <li><strong>Fully Responsive Layout:</strong> Optimized for seamless display and functionality on desktops, tablets, and mobile devices.</li>
+            <li><strong>Light & Dark Theme Support:</strong> Easily switch between light and dark modes (Dark mode functionality can be implemented by the buyer, as the template provides the necessary CSS structure in <code>core.css</code>).</li>
+            <li><strong>Real-time Theme Customizer:</strong> Effortlessly change the primary color of the entire template on the fly via a built-in color picker in the header.</li>
+            <li><strong>Multi-Language Support:</strong> Pre-configured with English and Indonesian languages, making it easy to adapt for international users.</li>
+            <li><strong>Modular & Maintainable JavaScript:</strong> Well-organized JavaScript files (<code>main.js</code> for global functions, <code>dashboard.js</code>, <code>analytics.js</code>, etc., for page-specific scripts) ensure better performance and easier maintenance.</li>
+            <li><strong>Interactive Charts:</strong> Engage your users with dynamic and informative data visualizations powered by Chart.js.</li>
+            <li><strong>Dynamic Table Management:</strong> Interactive tables support common management actions like viewing, editing, and deleting entries, complete with toast notifications for user feedback.</li>
+            <li><strong>Comprehensive Page Set:</strong> Includes essential admin pages: Dashboard, Analytics, Orders, Users, Products, Categories, Settings, and Help.</li>
+            <li><strong>Accordion-style FAQ Section:</strong> A user-friendly FAQ section for quick answers to common questions.</li>
+            <li><strong>Common Modals:</strong> Ready-to-use modals for profile management, account switching, login/register simulation, and logout confirmation.</li>
+            <li><strong>Global Toast Notifications:</strong> Provides clear and concise feedback to users for various actions.</li>
+        </ul>
+
+        <h2>2. Included Files (Detailed)</h2>
+        <p>This section provides a more detailed breakdown of the files included in your DashPro package, outlining their purpose and modularity.</p>
+        <pre>
+DashPro/
+├── index.html                  # Main Dashboard page
+├── analytics.html              # Analytics overview page
+├── orders.html                 # Order Management page
+├── products.html               # Product Management page
+├── categories.html             # Category Management page
+├── users.html                  # User Management page
+├── settings.html               # System Settings page
+├── help.html                   # Help & Support page
+├── assets/
+│   ├── css/
+│   │   ├── core.css            # Global styles and basic components (REQUIRED)
+│   │   ├── analytics.css       # Page-specific styles for Analytics (currently empty, ready for your custom styles)
+│   │   ├── categories.css      # Page-specific styles for Categories (currently empty, ready for your custom styles)
+│   │   ├── help.css            # Page-specific styles for Help (currently empty, ready for your custom styles)
+│   │   ├── orders.css          # Page-specific styles for Orders (currently empty, ready for your custom styles)
+│   │   ├── products.css        # Page-specific styles for Products (currently empty, ready for your custom styles)
+│   │   ├── settings.css        # Page-specific styles for Settings (currently empty, ready for your custom styles)
+│   │   └── users.css           # Page-specific styles for Users (currently empty, ready for your custom styles)
+│   ├── js/
+│   │   ├── main.js             # Global scripts and utility functions (REQUIRED)
+│   │   ├── dashboard.js        # Dashboard-specific scripts
+│   │   ├── analytics.js        # Analytics-specific scripts
+│   │   ├── orders.js           # Orders-specific scripts
+│   │   ├── products.js         # Products-specific scripts
+│   │   ├── categories.js       # Categories-specific scripts
+│   │   ├── users.js            # Users-specific scripts
+│   │   ├── settings.js         # Settings-specific scripts
+│   │   └── help.js             # Help-specific scripts
+│   └── images/
+│       └── (Your image assets here, e.g., profile.jpg, products.jpg)
+├── documentation.html          # Comprehensive template documentation
+├── license.txt                 # MIT License file
+└── readme.txt                  # This quick overview file
+        </pre>
+        <ul>
+            <li>**HTML Pages:**
+                <ul>
+                    <li><code>index.html</code>: The main Dashboard page providing an overview of statistics and recent orders.</li>
+                    <li><code>analytics.html</code>: The Analytics page with various visitor metrics and traffic charts.</li>
+                    <li><code>orders.html</code>: The Order Management page with a filterable order list and detailed actions.</li>
+                    <li><code>products.html</code>: The Product Management page with a product list, details, and simulated image gallery.</li>
+                    <li><code>categories.html</code>: The Category Management page with a product category list and toggleable descriptions.</li>
+                    <li><code>users.html</code>: The User Management page with a user list, roles, and statuses.</li>
+                    <li><code>settings.html</code>: The System Settings page covering General, Security, Notifications, and Integrations settings.</li>
+                    <li><code>help.html</code>: The Help & Support page featuring Frequently Asked Questions (FAQs) and contact options.</li>
+                </ul>
+                *(All HTML pages share a common structure for the sidebar and header, making global updates easier.)*
+            </li>
+            <li>**CSS Files (<code>assets/css/</code>):**
+                <ul>
+                    <li><code>core.css</code>: The main CSS file containing global styles, responsive rules, basic component styling (buttons, cards, forms, tables, modals), and CSS variables for theming. This is your primary CSS file.</li>
+                    <li><code>analytics.css</code>, <code>users.css</code>, <code>products.css</code>, <code>orders.css</code>, <code>categories.css</code>, <code>settings.css</code>, <code>help.css</code>: These are dedicated, currently empty CSS files for each page, provided for you to add page-specific styles without cluttering `core.css`. They are loaded after `core.css`, allowing for easy style overrides.</li>
+                </ul>
+            </li>
+            <li>**JavaScript Files (<code>assets/js/</code>):**
+                <ul>
+                    <li><code>main.js</code>: Contains all global JavaScript functionalities and utilities used throughout the theme, including sidebar toggling, modal handling, toast notifications, multi-language logic, and theme customization (primary color switcher).</li>
+                    <li><code>dashboard.js</code>: Specific scripts for the Dashboard page, including Chart.js initialization for revenue and sales charts, and logic for recent orders table interactions.</li>
+                    <li><code>analytics.js</code>: Specific scripts for the Analytics page, handling date filters and Chart.js initialization for visitor trends and traffic sources.</li>
+                    <li><code>orders.js</code>: Specific scripts for the Orders page, managing order status filters, Chart.js initialization for order statistics, and table interactions.</li>
+                    <li><code>users.js</code>: Specific scripts for the Users page, including Chart.js initialization for user statistics and user table interactions.</li>
+                    <li><code>products.js</code>: Specific scripts for the Products page, managing product statistics charts, table interactions, and the product image gallery modal.</li>
+                    <li><code>categories.js</code>: Specific scripts for the Categories page, handling category statistics charts, table interactions, and the category description toggle.</li>
+                    <li><code>settings.js</code>: Specific scripts for the Settings page, managing tab navigation and form submission simulations.</li>
+                    <li><code>help.js</code>: Specific scripts for the Help page, handling modal content population for help cards and the FAQ accordion functionality.</li>
+                </ul>
+            </li>
+            <li>**Documentation & Licensing:**
+                <ul>
+                    <li><code>documentation.html</code>: This comprehensive file provides in-depth instructions, customization options, and troubleshooting advice.</li>
+                    <li><code>license.txt</code>: The MIT License file, detailing the terms of use for this template.</li>
+                    <li><code>readme.txt</code>: This quick overview file.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>3. Installation Guide</h2>
+        <p>DashPro is a static HTML template, making the installation process very straightforward:</p>
+        <ol>
+            <li>
+                **Download Files:** Once you have obtained the template files, extract all their contents to your desired location on your computer.
+            </li>
+            <li>
+                **Folder Structure:** Ensure that the template's folder structure remains intact as described above. This is crucial for all file paths (CSS, JavaScript, images) etc. to function correctly.
+            </li>
+            <li>
+                **Local/Server Access:**
+                <ul>
+                    <li>**For Local Use (Development/Preview):** You can directly open any `.html` file (e.g., `index.html`) in your web browser. No local server like Apache or Nginx is strictly required for basic viewing.</li>
+                    <li>**Recommendation for Local Development:** For optimal performance and to avoid potential issues with file paths (especially for AJAX requests if you implement them later), it is highly recommended to serve the template using a local development server (e.g., Python's `http.server`, Node.js `http-server`, or the popular Live Server extension in VS Code).</li>
+                    <li>**For Web Server Deployment:** Upload the entire `DashPro` folder (or its contents if you wish the template to be in the domain root) to your web server's directory (e.g., `public_html`, `htdocs`, or `www`).</li>
+                </ul>
+            </li>
+            <li>
+                **Done!** Your template is now ready for use.
+            </li>
+        </ol>
+
+        <h2>4. General Instructions</h2>
+        <p>DashPro is built with a modular and clean code structure, making it easy to understand and customize. Each page has its dedicated JavaScript file for specific functionalities, while global utilities are handled by <code>main.js</code>. This structure helps in quick identification and modification of code.</p>
+
+        <h3>4.1. Sidebar Navigation</h3>
+        <p>The sidebar on the left provides quick access to all main admin panel pages. The currently active page is visually highlighted with an `.active` class on its menu link.</p>
+        <p>On mobile devices or small screens (&lt; 992px), the sidebar is initially hidden. You can reveal it by clicking the "hamburger" icon (<i class="fas fa-bars icon-example"></i>) in the header and dismiss it with the "X" icon (<i class="fas fa-times icon-example"></i>) inside the sidebar itself.</p>
+
+        <h3>4.2. Header and Dropdowns</h3>
+        <p>The header at the top of every page provides essential global functionalities via interactive icons:</p>
+        <ul>
+            <li><i class="fas fa-bars icon-example"></i> <strong>Toggle Sidebar:</strong> Visible on smaller screens to open/close the sidebar.</li>
+            <li><i class="fas fa-bell icon-example"></i> <strong>Notifications:</strong> Displays a badge for unread notifications and a dropdown with recent alerts. Clicking "View All Notifications" opens a comprehensive modal.</li>
+            <li><i class="fas fa-envelope icon-example"></i> <strong>Messages:</strong> Shows a badge for unread messages and a dropdown with recent communications. Clicking "View All Messages" opens a detailed messages modal.</li>
+            <li><i class="fas fa-globe icon-example"></i> <strong>Language Selection:</strong> Allows users to switch between English and Bahasa Indonesia for the UI text. Your preference is saved in Local Storage.</li>
+            <li><i class="fas fa-palette icon-example"></i> <strong>Theme Settings:</strong> Provides options to instantly change the primary color of the template. Your selection is saved in Local Storage.</li>
+            <li><i class="fas fa-user icon-example"></i> <strong>User Profile:</strong> Displays the current user's name and role, and offers a dropdown menu with profile-related actions such as "My Profile", "Account Settings", "Switch Account", "Login / Register", and "Log Out".</li>
+        </ul>
+
+        <h3>4.3. Modals (Pop-ups)</h3>
+        <p>Many interactive elements like statistical cards ("Details" buttons) and table action buttons ("View", "Edit", "Delete") trigger modals to display additional information or interactive forms. Modals can be closed by clicking the "X" button in the top right corner, a dedicated "Close" button within the modal, or by clicking anywhere outside the modal content.</p>
+
+        <h3>4.4. Toast Notifications</h3>
+        <p>Upon successful actions (e.g., data updates, settings saved, item deletion), a small, non-intrusive toast notification will temporarily appear at the bottom center of the screen, providing immediate feedback to the user. This functionality is provided by the <code>showToast()</code> function in <code>assets/js/main.js</code>.</p>
+
+        <h2>5. Customization Options</h2>
+        <p>DashPro is designed to be highly customizable. Here's how you can modify and extend its functionalities to suit your specific needs:</p>
+
+        <h3>5.1. Theme Customization (Primary Color)</h3>
+        <p>You can dynamically change the template's primary color via the <i class="fas fa-palette icon-example"></i> icon in the header:</p>
+        <ol>
+            <li>Click the palette icon in the header.</li>
+            <li>Choose from predefined color dots (e.g., Blue, Green, Orange, Red) or use the custom color picker input to select any hex color.</li>
+            <li>The template's primary color (affecting the sidebar, main buttons, icon backgrounds, etc.) will instantly update across all pages.</li>
+            <li>Your chosen color is stored in the browser's Local Storage, ensuring it persists across sessions.</li>
+            <li><strong>Advanced Customization (via CSS):</strong> For deeper theme modifications or to add more customizable color options, you can directly edit CSS variables in <code>assets/css/core.css</code>. The `--primary` variable sets the main color, and `--primary-dark` is programmatically calculated by `main.js` for hover states and gradients. You can override `--primary-dark` or introduce new CSS variables for granular control over different UI elements.</li>
+        </ol>
+
+        <h3>5.2. Multi-Language Support & Translation</h3>
+        <p>The template comes pre-configured with multi-language functionality (English and Bahasa Indonesia), allowing users to switch the UI text instantly.</p>
+        <ol>
+            <li>Click the globe icon <i class="fas fa-globe icon-example"></i> in the header.</li>
+            <li>Select "English" or "Bahasa Indonesia".</li>
+            <li>All text elements across the dashboard that have a <code>data-lang-key</code> attribute will be updated instantly to the selected language.</li>
+            <li>Your language preference is saved in the browser's Local Storage, so it will persist even after closing and reopening the browser.</li>
+            <li><strong>How it Works:</strong> Language translation is managed by the <code>setLanguage()</code> function in <code>assets/js/main.js</code>, which uses the global <code>translations</code> object. This function looks for elements with the <code>data-lang-key="[your-key]"</code> attribute and replaces their content (or placeholder text for inputs) with the corresponding translation.</li>
+            <li><strong>Adding New Languages:</strong>
+                <ul>
+                    <li>In <code>assets/js/main.js</code>, locate the `translations` object.</li>
+                    <li>Add a new language object (e.g., <code>'es'</code> for Spanish) as a property within the `translations` object, following the existing structure. Ensure you translate all `key: value` pairs from the 'en' (English) object accurately into your new language. Each key corresponds to a <code>data-lang-key</code> attribute in your HTML or a string used dynamically in JavaScript.</li>
+                    <li>In `index.html` (and other HTML files if you want the language switcher on all pages), find the `language-menu` dropdown within the header.</li>
+                    <li>Add a new <code>&lt;a&gt;</code> tag for your new language, similar to the existing ones. Ensure the `data-lang` attribute matches your new language code (e.g., `data-lang="es"`). You might also need to update the `flag-icon` class if you have a custom flag icon for that language (e.g., `.flag-icon.es { background-image: url('path/to/es.svg'); }` in your CSS).</li>
+                </ul>
+            </li>
+            <li><strong>Modifying Existing Translations:</strong> To change any existing text, simply edit the corresponding `value` for the `key` within the `en` or `id` objects in the `translations` object in `assets/js/main.js`.</li>
+            <li><strong>Translating New HTML Content:</strong> If you add new HTML elements with user-facing text, ensure you give them a unique `data-lang-key="[new-key]"` attribute and add that `[new-key]: "Your Translated Text"` pair to all language objects in `assets/js/main.js`.</li>
+        </ol>
+
+        <h3>5.3. Filter Data</h3>
+        <ul>
+            <li><strong>Analytics Page Filters:</strong> Buttons like "Last 30 Days" (using the <code>data-range</code> attribute) dynamically apply a filter on the presented data (currently simulated). You can extend <code>assets/js/analytics.js</code> to actually fetch or process different data sets based on the <code>data-range</code> attribute of these buttons.</li>
+            <li><strong>Orders Page Filters:</strong> "All", "Completed", "Pending", "Processing" buttons filter table rows by their <code>data-status</code> attribute. This is implemented in <code>assets/js/orders.js</code>. You can easily add more status types by modifying the <code>data-status</code> attributes in HTML rows and adding new filter buttons.</li>
+            <li><strong>Search Box:</strong> Input fields are available on various pages for searching table content. The current implementation in <code>dashboard.js</code> (for recent orders), <code>users.js</code>, <code>products.js</code>, and <code>categories.js</code> (for their respective tables) filters rows based on text content visible in the table. You can expand this logic in the corresponding JS files to search across multiple columns or implement more advanced search algorithms.</li>
+        </ul>
+
+        <h3>5.4. Table Actions (View, Edit, Delete)</h3>
+        <p>Each data table row (e.g., in Dashboard, Orders, Products, Categories, Users) features action buttons that trigger modals for viewing, editing, or deleting entries. The data for these modals is pulled directly from <code>data-</code> attributes on the HTML table rows.</p>
+        <ul>
+            <li><i class="fas fa-eye icon-example"></i> <strong>View Buttons:</strong> Open a modal (e.g., <code>viewOrderModal</code>, <code>viewProductModal</code>, <code>viewUserModal</code>, <code>viewCategoryModal</code>) populated with data from the clicked table row's <code>data-</code> attributes. You can customize the modal content by editing the HTML structure within the modal definition in the relevant HTML page.</li>
+            <li><i class="fas fa-edit icon-example"></i> <strong>Edit Buttons:</strong> Open an edit modal (e.g., <code>editOrderModal</code>, <code>editProductModal</code>, <code>editUserModal</code>, <code>editCategoryModal</code>) with form fields pre-filled from the row's <code>data-</code> attributes.
+                <ul>
+                    <li><strong>Implementing Persistent Edits:</strong> To make edits permanent, you would modify the <code>submit</code> event listener for the edit form in the respective JavaScript file (e.g., <code>dashboard.js</code> for recent orders, <code>products.js</code> for products). Instead of just updating the UI (DOM manipulation), you would send an asynchronous (AJAX/Fetch API) request to your backend API to save the changes to your database.</li>
+                    <li><strong>Adding New Fields:</strong> To add new editable fields, include them in the HTML of the edit modal's form (with unique IDs and names) and add corresponding <code>data-</code> attributes to the table rows. Then, update the JavaScript in the respective JS file to read/write these new attributes and include them in your backend API call.</li>
+                </ul>
+            </li>
+            <li><i class="fas fa-trash icon-example"></i> <strong>Delete Buttons:</strong> Open a confirmation modal (e.g., <code>deleteConfirmModal</code>, <code>deleteProductConfirmModal</code>, <code>deleteUserConfirmModal</code>, <code>deleteCategoryConfirmModal</code>). Upon confirmation, the corresponding table row is removed from the DOM.
+                <ul>
+                    <li><strong>Implementing Persistent Deletions:</strong> Similar to edits, you would modify the <code>click</code> listener for the confirm delete button in the respective JS file. Instead of just removing the row from the DOM, send an asynchronous (AJAX/Fetch API) request to your backend API to delete the entry from your database.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>5.5. Adding New Content (Products, Users, Categories, Orders)</h3>
+        <p>Each management page (Products, Users, Categories) has an "Add" button (e.g., "Add Product", "Add User"). Currently, these buttons only trigger a toast notification, indicating where a form/modal to add content would appear. To implement actual content addition:</p>
+        <ol>
+            <li><strong>Design the "Add" Modal/Form:</strong> Create a new modal (e.g., <code>addUsersModal</code>, <code>addProductsModal</code>) with a form containing input fields for all necessary data (similar to the "Edit" modals). Place this modal definition within the relevant HTML page.</li>
+            <li><strong>Connect "Add" Button:</strong> In the respective JavaScript file (e.g., <code>products.js</code>, <code>users.js</code>, <code>categories.js</code>), modify the event listener for the "Add" button to open your newly created modal instead of just showing a toast.</li>
+            <li><strong>Implement Submission Logic:</strong> Add an event listener for the submission of the "Add" form. This logic would:
+                <ul>
+                    <li>Collect all data from the form fields.</li>
+                    <li>(Optional, but recommended for persistence) Send an asynchronous (AJAX/Fetch API) request to your backend to create a new entry in your database.</li>
+                    <li>Upon successful creation (from backend or simulated), dynamically create a new <code>&lt;tr&gt;</code> element in the table, populate it with the new data, and append it to the table body. Ensure proper <code>data-</code> attributes are set for future edits/deletions.</li>
+                    <li>Clear the form, close the modal, and display a success toast.</li>
+                </ul>
+            </li>
+        </ol>
+
+        <h3>5.6. Customizing Charts</h3>
+        <p>DashPro heavily utilizes Chart.js (version 4.x) for all its graphical representations, providing dynamic and visually appealing data insights. Each chart is initialized and configured in its respective JavaScript file (<code>dashboard.js</code>, <code>analytics.js</code>, <code>orders.js</code>, <code>products.js</code>, <code>categories.js</code>, <code>users.js</code>).</p>
+        <ul>
+            <li><strong>Changing Chart Data:</strong> To update the data displayed in any chart, modify the <code>data</code> arrays within the <code>datasets</code> property in the chart's configuration object. This is where you would link your actual data sources (e.g., from a backend API).</li>
+            <li><strong>Changing Chart Type:</strong> Easily switch the visualization type by altering the <code>type</code> property (e.g., from <code>'line'</code> to <code>'bar'</code>, <code>'pie'</code>, <code>'doughnut'</code>, <code>'radar'</code>, <code>'polarArea'</code>) during Chart.js initialization.</li>
+            <li><strong>Customizing Colors:</strong> Adjust the <code>borderColor</code>, <code>backgroundColor</code>, <code>pointBackgroundColor</code>, <code>pointBorderColor</code>, etc., properties within the <code>datasets</code> object. You can use hex codes, RGB, or rgba values, or even CSS variables defined in <code>core.css</code> for consistent theming.</li>
+            <li><strong>Modifying Options:</strong> The <code>options</code> object within each chart's configuration provides extensive control over its appearance and behavior. You can customize scales (axes), legends, tooltips, animations, responsiveness, and much more. Refer to the comprehensive <a href="https://www.chartjs.org/docs/latest/" target="_blank">official Chart.js documentation</a> for full details on all available options.</li>
+            <li><strong>Adding Plugins:</strong> The template already includes <code>chartjs-plugin-datalabels</code> on some pages. You can enable it or add other Chart.js plugins to enhance your charts with additional features like annotations, custom animations, or more complex data labels.</li>
+        </ul>
+
+        <h3>5.7. Modifying Modals and Pages</h3>
+        <ul>
+            <li><strong>Edit Modal Content:</strong> All modals are defined directly within their respective HTML files (e.g., <code>dashboard.html</code> for Dashboard modals, <code>products.html</code> for Product modals). You have full control to modify their HTML structure, add/remove form fields, adjust text, or change their styling via CSS.</li>
+            <li><strong>Adding New Pages:</strong> To add a completely new page to your admin panel, duplicate an existing HTML file (e.g., <code>index.html</code>). Rename it, and modify its content. Remember to update the sidebar navigation in <em>all</em> existing HTML files to include a link to your new page. Also, create a new dedicated JavaScript file for its specific functionalities, similar to <code>dashboard.js</code>, and include it in your new page.</li>
+            <li><strong>Customizing Global Styles:</strong> The primary styling is managed in <code>assets/css/core.css</code>. You can edit this file to modify global fonts, colors (beyond the primary color customizer), spacing, typography, and general layout rules. For page-specific styles, use the dedicated empty CSS files (e.g., `assets/css/analytics.css`).</li>
+        </ul>
+
+        <h2>6. Font Details</h2>
+        <p>The DashPro template uses a combination of modern web fonts from Google Fonts for text and scalable vector icons from Font Awesome for graphical elements, ensuring a crisp and professional appearance across all devices:</p>
+        <ul>
+            <li>
+                <strong>Text Font (Google Fonts):</strong>
+                <p><code>Poppins</code> is the chosen primary font for all textual content throughout the template. Its clean and versatile design ensures excellent readability. It is imported via the Google Fonts CDN:</p>
+                <pre>&lt;link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"&gt;</pre>
+                <p>The template specifically uses font weights 300 (Light), 400 (Regular), 500 (Medium), 600 (Semi-bold), and 700 (Bold) to provide typographic hierarchy and emphasis.</p>
+            </li>
+            <li>
+                <strong>Icons (Font Awesome):</strong>
+                <p>Vector-based icons are extensively used throughout the template for sidebar navigation, header elements, statistical cards, action buttons within tables, and other decorative purposes. Font Awesome is imported via CDN for ease of use and consistent rendering:</p>
+                <pre>&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"&gt;</pre>
+                <p>As a vector-based library, Font Awesome icons scale perfectly to any size without losing quality. You can find a complete list of available icons and their usage instructions on the <a href="https://fontawesome.com/" target="_blank">official Font Awesome website</a>.</p>
+            </li>
+        </ul>
+
+        <h2>7. Common Issues/Bugs and How to Resolve Them</h2>
+        <h3>7.1. Issue 1: "Could not read source map for chart.js" in Browser Console (Informational Warning)</h3>
+        <div class="note">
+            <p><strong>Description:</strong> When you open the browser's developer console (e.g., Chrome DevTools, Firefox Web Console), you might occasionally see warning messages that resemble: <code>Could not read source map for https://cdn.jsdelivr.net/npm/chart.js: Unexpected 404 response from ...chart.umd.js.map</code>.</p>
+            <p><strong>Cause:</strong> This message appears because your browser attempts to load a "source map" file (<code>.map</code>) associated with the Chart.js library, which is loaded directly from a Content Delivery Network (CDN). Source map files are debugging tools used by developers to map minified, compiled, or transpiled code back to its original source code, making it easier to debug in the browser. The warning simply means the browser could not locate this specific <code>.map</code> file on the CDN.</p>
+            <p><strong>How to Resolve (No Action Needed):</strong></p>
+            <ul>
+                <li><strong>Harmless Warning:</strong> This is a **harmless warning** and **does not indicate an error, bug, or issue with your template's functionality or performance**. The Chart.js library itself will load and function correctly without the source map.</li>
+                <li><strong>No User Action Required:</strong> Since the Chart.js file is loaded from a third-party CDN, you do not have direct control over the presence or path of its source map file. You can safely ignore these warnings. ThemeForest reviewers are generally aware of and accept such non-critical, CDN-related warnings. This template is free of errors or bugs within its own code.</li>
+            </ul>
+        </div>
+
+        <h3>7.2. Issue 2: Table Data or Form Changes Do Not Persist After Page Refresh</h3>
+        <div class="warning">
+            <p><strong>Description:</strong> When you perform actions like editing or deleting entries in tables (e.g., on the Orders, Products, or Users pages), or saving settings via forms on the Settings page, the changes are immediately visible in the user interface. However, if you refresh the page or navigate away and then return, the data reverts to its original, hardcoded state.</p>
+            <p><strong>Cause:</strong> This template is designed as a static HTML/CSS/JavaScript template. All functionalities for "Edit", "Delete", and form submissions are implemented purely on the front-end using JavaScript to manipulate the Document Object Model (DOM). There is no backend server or database connected to this template to store data persistently.</p>
+            <p><strong>How to Resolve (Requires Backend Integration):</strong></p>
+            <ul>
+                <li><strong>Backend Integration (Essential for Persistence):</strong> To ensure that data changes are permanent, you must integrate this template with a backend system (e.g., developed using Node.js, Python, PHP, Ruby on Rails, Java, etc.) and a database (e.g., MySQL, PostgreSQL, MongoDB, SQL Server).
+                    <br>For every "Edit", "Delete", or "Add" action, you would modify the corresponding JavaScript function in relevant files like <code>dashboard.js</code>, <code>products.js</code>, <code>users.js</code>, <code>categories.js</code>, or <code>settings.js</code>. Instead of directly manipulating the DOM, you would send an asynchronous (AJAX/Fetch API) request to your backend API. The backend would then process the data, perform the necessary operation (create, read, update, delete) on your database, and send a response. Upon receiving a successful response from the backend, you would then update the UI to reflect the persistent change.</li>
+                <li><strong>Frontend State Management (Temporary Persistence):</strong> If, for specific use cases, you need temporary data persistence <em>only within a user's current browser session</em> (without a backend), you could implement browser storage solutions like Local Storage or Session Storage to save and load data. However, this is generally not recommended for critical application data that needs to be accessed across different sessions or users.</li>
+            </ul>
+        </div>
+
+        <h3>7.3. Issue 3: Missing Images or Broken Paths</h3>
+        <div class="warning">
+            <p><strong>Description:</strong> Some images within the template, such as user profile pictures in the header or product images in the Products gallery, might not be displayed correctly, appearing as broken image icons.</p>
+            <p><strong>Cause:</strong> This issue typically arises if the file path specified in the <code>&lt;img&gt;</code> tag's <code>src</code> attribute is incorrect, or if the actual image file itself is missing or corrupted within the designated directory. For instance, `profile.jpg` and `products.jpg` are expected to be located in the `assets/images/` folder relative to your HTML files.</p>
+            <p><strong>How to Resolve:</strong></p>
+            <ul>
+                <li><strong>Verify File Paths:</strong> Carefully double-check that the <code>src</code> attributes in all your HTML <code>&lt;img&gt;</code> tags correctly point to the exact location of your image files. For example, ensure it's `src="assets/images/profile.jpg"` if the image resides in that specific path.</li>
+                <li><strong>Ensure Image Files Exist:</strong> Confirm that all referenced image files (e.g., `profile.jpg`, `products.jpg`) are physically present and intact in their respective `assets/images/` directories within your template's structure.</li>
+                <li><strong>Licensing and Attribution for Assets:</strong> If you replace the default placeholder images with your own, it is crucial to ensure you have the necessary commercial licenses for these new images. If using images from free stock photo sites (like Unsplash, Pexels), always provide proper attribution as required by their licensing terms for commercial use.</li>
+            </ul>
+        </div>
+
+        <h3>7.4. Issue 4: Charts Display Static Data and Do Not Update Dynamically</h3>
+        <div class="warning">
+            <p><strong>Description:</strong> The various charts used throughout the dashboard (e.g., Revenue Overview, Visitor Trends, Sales Distribution) display fixed, hardcoded data. They do not update with new or filtered information even when you interact with filter buttons or open "Details" modals on different days.</p>
+            <p><strong>Cause:</strong> The data used to render the charts in files like `dashboard.js`, `analytics.js`, `orders.js`, `products.js`, `categories.js`, and `users.js` is static and embedded directly within the JavaScript code. While filter buttons and "Details" modal triggers might re-initialize the charts, they repeatedly use the same predefined static data arrays.</p>
+            <p><strong>How to Resolve (Requires Data Source Integration):</strong></p>
+            <ul>
+                <li><strong>Dynamic Data Fetching (Recommended):</strong> To make your charts truly dynamic, you need to fetch data from an external source (e.g., a RESTful API endpoint, a local JSON file that's updated) when the page loads, when a filter is applied, or when a chart modal is opened. You would modify the JavaScript files to:
+                    <ul>
+                        <li>Use <code>fetch()</code> or <code>XMLHttpRequest</code> to retrieve data from your chosen data source.</li>
+                        <li>Parse the fetched data (e.g., from JSON).</li>
+                        <li>Update the <code>data</code> property of the Chart.js configuration object with the new data before the chart is rendered or updated.</li>
+                    </ul>
+                </li>
+                <li><strong>Local Data Manipulation (Advanced Frontend):</strong> If you are strictly limiting to a frontend-only solution without a backend, you could implement a more complex JavaScript structure. This would involve storing all your potential data sets locally within JavaScript (e.g., in arrays of objects) and then writing logic to filter, process, and provide the correct data to the charts based on user interactions.</li>
+            </ul>
+        </div>
+
+        <h2>8. Credits & Resources</h2>
+        <p>DashPro utilizes the following third-party libraries and resources:</p>
+        <ul>
+            <li><strong>Fonts:</strong> Poppins from Google Fonts (<a href="https://fonts.google.com/specimen/Poppins" target="_blank">https://fonts.google.com/specimen/Poppins</a>)</li>
+            <li><strong>Icons:</strong> Font Awesome Free (<a href="https://fontawesome.com/" target="_blank">https://fontawesome.com/</a>)</li>
+            <li><strong>Charts:</strong> Chart.js (<a href="https://www.chartjs.org/" target="_blank">https://www.chartjs.org/</a>) and Chart.js Plugin Datalabels (<a href="https://www.chartjs.org/chartjs-plugin-datalabels/" target="_blank">https://www.chartjs.org/chartjs-plugin-datalabels/</a>)</li>
+            <li><strong>Placeholder Images:</strong> <code>profile.jpg</code> and <code>products.jpg</code> (for profile & generic images in demo) - located in <code>assets/images/</code>.</li>
+        </ul>
+
+        <h2>9. Support & Feedback</h2>
+        <p>We are committed to providing excellent support for DashPro. If you encounter any issues, have questions, or require further assistance:</p>
+        <ol>
+            <li><strong>Consult the Documentation:</strong> Please refer to this <code>documentation.html</code> file first. It covers detailed instructions, customization guides, and solutions for common questions and issues.</li>
+            <li><strong>Consult the Help Page:</strong> The interactive <code>help.html</code> page within the template itself provides quick answers via its FAQ section and directs you to contact options for personalized support.</li>
+            <li><strong>Contact Support:</strong> If your issue is not covered in the documentation or help page, feel free to contact our support team. You can find the available contact methods (e.g., email, phone) on the <code>help.html</code> page within the template.</li>
+        </ol>
+        <p>We highly appreciate your feedback and are continuously working to improve DashPro. Your suggestions are invaluable!</p>
+
+        <h2>10. Licensing</h2>
+        <p>This template, "DashPro - Modern Admin Panel Dashboard", is licensed under the **MIT License**. This permissive license grants you broad rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the software, subject to including the original copyright and permission notice in all copies or substantial portions of the Software.</p>
+        <p>Please refer to the <code>license.txt</code> file included in the package for the full details of the MIT License.</p>
+        <p>Copyright (c) 2023 [Muhammad Faqih Al Rifai/Dash Pro]</p>
+
+        <hr>
+        <p class="text-center">© 2023 DashPro. All rights reserved.</p>
+    </div>
+</body>
+</html>

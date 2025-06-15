@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang-key="menuCategories">DashPro - Categories</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/core.css">
+</head>
+<body class="categories-page">
+    <div class="app-container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <i class="fas fa-rocket fa-2x"></i>
+                <h2>DashPro</h2>
+                <button class="close-sidebar" aria-label="Close Sidebar">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="sidebar-menu">
+                <p class="menu-title" data-lang-key="menuMain">Main</p>
+                <div class="menu-item">
+                    <a href="index.html" class="menu-link">
+                        <i class="fas fa-home"></i>
+                        <span data-lang-key="menuDashboard">Dashboard</span>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a href="analytics.html" class="menu-link">
+                        <i class="fas fa-chart-line"></i>
+                        <span data-lang-key="menuAnalytics">Analytics</span>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a href="orders.html" class="menu-link">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span data-lang-key="menuOrders">Orders</span>
+                        <span class="badge">15</span>
+                    </a>
+                </div>
+
+                <p class="menu-title" data-lang-key="menuManagement">Management</p>
+                <div class="menu-item">
+                    <a href="users.html" class="menu-link">
+                        <i class="fas fa-users"></i>
+                        <span data-lang-key="menuUsers">Users</span>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a href="products.html" class="menu-link">
+                        <i class="fas fa-box"></i>
+                        <span data-lang-key="menuProducts">Products</span>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a href="categories.html" class="menu-link active">
+                        <i class="fas fa-list"></i>
+                        <span data-lang-key="menuCategories">Categories</span>
+                    </a>
+                </div>
+
+                <p class="menu-title" data-lang-key="menuSettings">Settings</p>
+                <div class="menu-item">
+                    <a href="settings.html" class="menu-link">
+                        <i class="fas fa-cog"></i>
+                        <span data-lang-key="menuSettings">Settings</span>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a href="help.html" class="menu-link">
+                        <i class="fas fa-question-circle"></i>
+                        <span data-lang-key="menuHelp">Help</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="header">
+                <button class="toggle-sidebar">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <div class="header-right">
+                    <div class="header-icon dropdown-toggle" id="notificationsToggle">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">5</span> <div class="dropdown-menu notifications-menu" id="notificationsMenu">
+                            <h4 data-lang-key="headerNotificationsTitle">Notifications</h4>
+                            <div class="notification-item">
+                                <span class="notification-icon new"><i class="fas fa-plus"></i></span>
+                                <div class="notification-content">
+                                    <p data-lang-key="notificationNewOrder">New order received! <strong data-lang-key="notificationOrderId">#ORD-001</strong></p>
+                                    <small>5 mins ago</small>
+                                </div>
+                            </div>
+                            <div class="notification-item">
+                                <span class="notification-icon alert"><i class="fas fa-exclamation-triangle"></i></span>
+                                <div class="notification-content">
+                                    <p data-lang-key="notificationLowStock">Product <strong data-lang-key="notificationProductA">"Product A"</strong> is low in stock.</p>
+                                    <small>1 hour ago</small>
+                                </div>
+                            </div>
+                            <div class="notification-item read">
+                                <span class="notification-icon"><i class="fas fa-check"></i></span>
+                                <div class="notification-content">
+                                    <p data-lang-key="notificationUpdateAvailable">System update available.</p>
+                                    <small>Yesterday</small>
+                                </div>
+                            </div>
+                            <a href="#" class="dropdown-footer" data-action="view-all-notifications" data-modal-target="notificationsModal" data-lang-key="headerViewAllNotifications">View All Notifications</a>
+                        </div>
+                    </div>
+
+                    <div class="header-icon dropdown-toggle" id="messagesToggle">
+                        <i class="fas fa-envelope"></i>
+                        <span class="message-badge">2</span> <div class="dropdown-menu messages-menu" id="messagesMenu">
+                            <h4 data-lang-key="headerMessagesTitle">Messages</h4>
+                            <div class="message-item">
+                                <img src="assets/images/profile.jpg" alt="User" class="message-avatar">
+                                <div class="message-content">
+                                    <p class="message-sender">Jane Doe</p>
+                                    <p class="message-preview" data-lang-key="messageNewFeatureInquiry">Inquiry about new feature...</p>
+                                    <small>20 mins ago</small>
+                                </div>
+                            </div>
+                            <div class="message-item">
+                                <img src="assets/images/profile.jpg" alt="User" class="message-avatar">
+                                <div class="message-content">
+                                    <p class="message-sender">Alex Smith</p>
+                                    <p class="message-preview" data-lang-key="messageFeedbackOnReport">Feedback on monthly report...</p>
+                                    <small>1 hour ago</small>
+                                </div>
+                            </div>
+                            <a href="#" class="dropdown-footer" data-action="view-all-messages" data-modal-target="messagesModal" data-lang-key="headerViewAllMessages">View All Messages</a>
+                        </div>
+                    </div>
+
+                    <div class="header-icon dropdown-toggle" id="languageToggle">
+                        <i class="fas fa-globe"></i>
+                        <div class="dropdown-menu language-menu" id="languageMenu">
+                            <a href="#" class="dropdown-item language-select active" data-lang="id">
+                                <span class="flag-icon id"></span> <span data-lang-key="languageIndonesian">Bahasa Indonesia</span>
+                            </a>
+                            <a href="#" class="dropdown-item language-select" data-lang="en">
+                                <span class="flag-icon en"></span> <span data-lang-key="languageEnglish">English</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="header-icon dropdown-toggle" id="themeToggle">
+                        <i class="fas fa-palette"></i>
+                        <div class="dropdown-menu theme-menu" id="themeMenu">
+                            <h4 data-lang-key="menuSettings">Theme Settings</h4>
+                            
+                            <div class="theme-option">
+                                <span data-lang-key="settingsThemePrimaryColor">Primary Color</span>
+                                <div class="color-picker-group">
+                                    <button class="color-dot active" data-color="#5a67d8" style="background-color: #5a67d8;"></button>
+                                    <button class="color-dot" data-color="#007bff" style="background-color: #007bff;"></button>
+                                    <button class="color-dot" data-color="#28a745" style="background-color: #28a745;"></button>
+                                    <button class="color-dot" data-color="#dc3545" style="background-color: #dc3545;"></button>
+                                    <input type="color" id="customPrimaryColorInput" value="#5a67d8" class="color-dot" title="Choose a custom color">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="user-profile profile-toggle" id="profileToggle">
+                        <img src="assets/images/profile.jpg" alt="User">
+                        <div class="user-info">
+                            <h4>John Doe</h4>
+                            <span>Administrator</span>
+                        </div>
+                        <div class="dropdown-menu profile-menu" id="profileMenu">
+                            <div class="profile-summary">
+                                <img src="assets/images/profile.jpg" alt="User">
+                                <div class="info">
+                                    <h5>John Doe</h5>
+                                    <small>john.doe@example.com</small>
+                                </div>
+                            </div>
+                            <a href="#" class="dropdown-item" data-action="my-profile" data-modal-target="myProfileModal"><i class="fas fa-user"></i> <span data-lang-key="profileMyProfile">My Profile</span></a>
+                            <a href="settings.html" class="dropdown-item"><i class="fas fa-cog"></i> <span data-lang-key="profileAccountSettings">Account Settings</span></a>
+                            <a href="#" class="dropdown-item" data-action="switch-account" data-modal-target="switchAccountModal"><i class="fas fa-users"></i> <span data-lang-key="profileSwitchAccount">Switch Account</span></a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" class="dropdown-item" data-action="login-register" data-modal-target="loginRegisterModal"><i class="fas fa-sign-in-alt"></i> <span data-lang-key="profileLoginRegister">Login / Register</span></a>
+                            <a href="#" class="dropdown-item logout-btn" data-action="logout" data-modal-target="logoutModal"><i class="fas fa-sign-out-alt"></i> <span data-lang-key="profileLogout">Log Out</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="page-header">
+                    <h1 data-lang-key="menuCategories">Category Management</h1>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item" data-lang-key="breadcrumbHome">Home</li>
+                        <li class="breadcrumb-item active" data-lang-key="menuCategories">Categories</li>
+                    </ul>
+                </div>
+
+                <div class="table-container">
+                    <div class="table-header">
+                        <h3 data-lang-key="categoriesProductCategories">Product Categories</h3>
+                        <div class="search-box">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Search categories..." data-lang-key="searchCategoriesPlaceholder" aria-label="Search categories">
+                        </div>
+                        <button class="btn-primary" id="addCategoryBtn"><i class="fas fa-plus"></i> <span data-lang-key="categoriesAddCategory">Add Category</span></button>
+                    </div>
+
+                    <table id="categoriesTable">
+                        <thead>
+                            <tr>
+                                <th data-lang-key="categoriesTableHeaderCategoryID">Category ID</th>
+                                <th data-lang-key="categoriesTableHeaderName">Name</th>
+                                <th data-lang-key="categoriesTableHeaderTotalProducts">Total Products</th>
+                                <th data-lang-key="categoriesTableHeaderLastUpdated">Last Updated</th>
+                                <th data-lang-key="tableHeaderActions">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr data-category-id="#CAT-001" data-name="Electronics" data-total-products="75" data-last-updated="20 May, 2023" data-description="This category includes a wide range of electronic devices such as laptops, smartphones, cameras, and audio equipment. It is one of our best-selling categories with high customer engagement.">
+                                <td>#CAT-001</td>
+                                <td><span data-lang-key="categoryElectronics">Electronics</span></td>
+                                <td>75</td>
+                                <td>20 May, 2023</td>
+                                <td class="table-actions">
+                                    <button class="action-btn toggle-description-btn" data-category="electronics" data-lang-key="categoriesShowDescription" aria-label="Show description for Electronics">Show Description</button>
+                                    <button class="action-btn view-category" title="View" aria-label="View category Electronics"><i class="fas fa-eye"></i></button>
+                                    <button class="action-btn edit-category" title="Edit" aria-label="Edit category Electronics"><i class="fas fa-edit"></i></button>
+                                    <button class="action-btn delete-category" title="Delete" aria-label="Delete category Electronics"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr class="category-description-row" data-category="electronics">
+                                <td colspan="5" class="category-description-content">
+                                    <p data-lang-key="catDescElectronics">This category includes a wide range of electronic devices such as laptops, smartphones, cameras, and audio equipment. It is one of our best-selling categories with high customer engagement.</p>
+                                </td>
+                            </tr>
+                            <tr data-category-id="#CAT-002" data-name="Apparel" data-total-products="120" data-last-updated="18 May, 2023" data-description="Our apparel collection features modern and stylish clothing for all genders and ages. From casual wear to formal attire, we offer diverse options for every season.">
+                                <td>#CAT-002</td>
+                                <td><span data-lang-key="categoryApparel">Apparel</span></td>
+                                <td>120</td>
+                                <td>18 May, 2023</td>
+                                <td class="table-actions">
+                                    <button class="action-btn toggle-description-btn" data-category="apparel" data-lang-key="categoriesShowDescription" aria-label="Show description for Apparel">Show Description</button>
+                                    <button class="action-btn view-category" title="View" aria-label="View category Apparel"><i class="fas fa-eye"></i></button>
+                                    <button class="action-btn edit-category" title="Edit" aria-label="Edit category Apparel"><i class="fas fa-edit"></i></button>
+                                    <button class="action-btn delete-category" title="Delete" aria-label="Delete category Apparel"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                             <tr class="category-description-row" data-category="apparel">
+                                <td colspan="5" class="category-description-content">
+                                    <p data-lang-key="catDescApparel">Our apparel collection features modern and stylish clothing for all genders and ages. From casual wear to formal attire, we offer diverse options for every season.</p>
+                                </td>
+                            </tr>
+                            <tr data-category-id="#CAT-003" data-name="Books" data-total-products="50" data-last-updated="10 May, 2023" data-description="A vast library of books covering various genres including fiction, non-fiction, educational, and children's literature. New titles are added weekly.">
+                                <td>#CAT-003</td>
+                                <td><span data-lang-key="categoryBooks">Books</span></td>
+                                <td>50</td>
+                                <td>10 May, 2023</td>
+                                <td class="table-actions">
+                                    <button class="action-btn toggle-description-btn" data-category="books" data-lang-key="categoriesShowDescription" aria-label="Show description for Books">Show Description</button>
+                                    <button class="action-btn view-category" title="View" aria-label="View category Books"><i class="fas fa-eye"></i></button>
+                                    <button class="action-btn edit-category" title="Edit" aria-label="Edit category Books"><i class="fas fa-edit"></i></button>
+                                    <button class="action-btn delete-category" title="Delete" aria-label="Delete category Books"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                             <tr class="category-description-row" data-category="books">
+                                <td colspan="5" class="category-description-content">
+                                    <p data-lang-key="catDescBooks">A vast library of books covering various genres including fiction, non-fiction, educational, and children's literature. New titles are added weekly.</p>
+                                </td>
+                            </tr>
+                            <tr data-category-id="#CAT-004" data-name="Home & Kitchen" data-total-products="90" data-last-updated="05 May, 2023" data-description="Everything you need for a comfortable home and functional kitchen, including appliances, decor, cookware, and storage solutions.">
+                                <td>#CAT-004</td>
+                                <td><span data-lang-key="categoryHomeKitchen">Home & Kitchen</span></td>
+                                <td>90</td>
+                                <td>05 May, 2023</td>
+                                <td class="table-actions">
+                                    <button class="action-btn toggle-description-btn" data-category="homekitchen" data-lang-key="categoriesShowDescription" aria-label="Show description for Home & Kitchen">Show Description</button>
+                                    <button class="action-btn view-category" title="View" aria-label="View category Home & Kitchen"><i class="fas fa-eye"></i></button>
+                                    <button class="action-btn edit-category" title="Edit" aria-label="Edit category Home & Kitchen"><i class="fas fa-edit"></i></button>
+                                    <button class="action-btn delete-category" title="Delete" aria-label="Delete category Home & Kitchen"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                             <tr class="category-description-row" data-category="homekitchen">
+                                <td colspan="5" class="category-description-content">
+                                    <p data-lang-key="catDescHomeKitchen">Everything you need for a comfortable home and functional kitchen, including appliances, decor, cookware, and storage solutions.</p>
+                                </td>
+                            </tr>
+                            <tr data-category-id="#CAT-005" data-name="Sports & Outdoors" data-total-products="60" data-last-updated="28 Apr, 2023" data-description="Gear and equipment for various sports activities and outdoor adventures, from camping and hiking to fitness and team sports.">
+                                <td>#CAT-005</td>
+                                <td><span data-lang-key="categorySportsOutdoors">Sports & Outdoors</span></td>
+                                <td>60</td>
+                                <td>28 Apr, 2023</td>
+                                <td class="table-actions">
+                                    <button class="action-btn toggle-description-btn" data-category="sportsoutdoors" data-lang-key="categoriesShowDescription" aria-label="Show description for Sports & Outdoors">Show Description</button>
+                                    <button class="action-btn view-category" title="View" aria-label="View category Sports & Outdoors"><i class="fas fa-eye"></i></button>
+                                    <button class="action-btn edit-category" title="Edit" aria-label="Edit category Sports & Outdoors"><i class="fas fa-edit"></i></button>
+                                    <button class="action-btn delete-category" title="Delete" aria-label="Delete category Sports & Outdoors"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr class="category-description-row" data-category="sportsoutdoors">
+                                <td colspan="5" class="category-description-content">
+                                    <p data-lang-key="catDescSportsOutdoors">Gear and equipment for various sports activities and outdoor adventures, from camping and hiking to fitness and team sports.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="cards-row" style="margin-top: 25px;">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon bg-primary">
+                                <i class="fas fa-layer-group"></i>
+                            </div>
+                            <div class="card-info">
+                                <h3>15</h3>
+                                <p data-lang-key="categoriesTotalCategories">Total Categories</p>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="trend"><i class="fas fa-arrow-up"></i> 5% <span data-lang-key="increase">increase</span></span>
+                            <button class="btn-details" data-modal-target="totalCategoriesModal" data-lang-key="detailsBtn" aria-label="Details for Total Categories">Details</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon bg-success">
+                                <i class="fas fa-plus-circle"></i>
+                            </div>
+                            <div class="card-info">
+                                <h3>3</h3>
+                                <p data-lang-key="categoriesNewCategoriesThisMonth">New Categories This Month</p>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="trend"><i class="fas fa-arrow-up"></i> 10% <span data-lang-key="increase">increase</span></span>
+                            <button class="btn-details" data-modal-target="newCategoriesModal" data-lang-key="detailsBtn" aria-label="Details for New Categories This Month">Details</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon bg-warning">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="card-info">
+                                <h3>5</h3>
+                                <p data-lang-key="categoriesTopCategories">Top Categories</p>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="trend"><i class="fas fa-arrow-up"></i> 0% <span data-lang-key="change">change</span></span>
+                            <button class="btn-details" data-modal-target="topCategoriesModal" data-lang-key="detailsBtn" aria-label="Details for Top Categories">Details</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon bg-info">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="card-info">
+                                <h3 data-lang-key="categoriesTrendingCategories">Trending Categories</h3>
+                                <p data-lang-key="categoriesTrendingCategoriesValue">Electronics, Apparel</p>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="trend"><i class="fas fa-arrow-up"></i> <span data-lang-key="highGrowth">High Growth</span></span>
+                            <button class="btn-details" data-modal-target="trendingCategoriesModal" data-lang-key="detailsBtn" aria-label="Details for Trending Categories">Details</button>
+                        </div>
+                    </div>
+                     <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon bg-secondary">
+                                <i class="fas fa-tags"></i>
+                            </div>
+                            <div class="card-info">
+                                <h3>80%</h3>
+                                <p data-lang-key="categoriesCategorizedProducts">Categorized Products</p>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="trend"><i class="fas fa-arrow-up"></i> 1% <span data-lang-key="increase">increase</span></span>
+                            <button class="btn-details" data-modal-target="categorizedProductsModal" data-lang-key="detailsBtn" aria-label="Details for Categorized Products">Details</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon bg-danger">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                            <div class="card-info">
+                                <h3>2</h3>
+                                <p data-lang-key="categoriesNeedingReview">Categories Needing Review</p>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="trend decrease"><i class="fas fa-arrow-down"></i> 0% <span data-lang-key="change">change</span></span>
+                            <button class="btn-details" data-modal-target="categoriesReviewModal" data-lang-key="detailsBtn" aria-label="Details for Categories Needing Review">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer">
+                <p data-lang-key="footerText">&copy; 2023 DashPro. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="totalCategoriesModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 data-lang-key="modalTotalCategoriesTitle">Total Categories Details</h2>
+            <div class="modal-body-content">
+                <p><strong data-lang-key="modalCount">Count:</strong> 15 <span data-lang-key="modalCategories">categories</span></p>
+                <div class="chart-modal-container">
+                    <canvas id="totalCategoriesModalChart"></canvas>
+                </div>
+                <p><strong data-lang-key="modalMainCategories">Main Categories:</strong> <span data-lang-key="categoryElectronics">Electronics</span>, <span data-lang-key="categoryApparel">Apparel</span>, <span data-lang-key="categoryHomeGoods">Home Goods</span>, <span data-lang-key="categoryBooks">Books</span>, <span data-lang-key="categorySportsOutdoors">Sports & Outdoors</span></p>
+                <p><strong data-lang-key="modalLastAdded">Last added:</strong> <span data-lang-key="modalTools">Tools</span> (<span data-lang-key="modalJune">June</span> 2023)</p>
+                <p class="modal-info-text" data-lang-key="modalTotalCategoriesInfo">Overview of all product categories in the system.</p>
+            </div>
+            <div class="modal-actions">
+                <button class="btn-primary close-modal-btn" data-lang-key="modalClose">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="newCategoriesModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 data-lang-key="modalNewCategoriesTitle">New Categories This Month Details</h2>
+            <div class="modal-body-content">
+                <p><strong data-lang-key="modalCount">Count:</strong> 3 <span data-lang-key="modalNewCategories">new categories</span></p>
+                <div class="chart-modal-container">
+                    <canvas id="newCategoriesModalChart"></canvas>
+                </div>
+                <p><strong data-lang-key="modalRecentlyAdded">Recently added:</strong> <span data-lang-key="modalTools">Tools</span>, <span data-lang-key="modalGarden">Garden</span>, <span data-lang-key="modalPetSupplies">Pet Supplies</span></p>
+                <p><strong data-lang-key="modalImpact">Impact:</strong> <span data-lang-key="modalIncreasedProductVariety">Increased product variety by</span> 5%</p>
+                <p class="modal-info-text" data-lang-key="modalNewCategoriesInfo">Track recent category additions and their impact.</p>
+            </div>
+            <div class="modal-actions">
+                <button class="btn-primary close-modal-btn" data-lang-key="modalClose">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="topCategoriesModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 data-lang-key="modalTopCategoriesTitle">Top Categories Details</h2>
+            <div class="modal-body-content">
+                <p><strong data-lang-key="modalTop5">Top 5:</strong> <span data-lang-key="categoryElectronics">Electronics</span>, <span data-lang-key="categoryApparel">Apparel</span>, <span data-lang-key="categoryHomeGoods">Home Goods</span>, <span data-lang-key="categoryBooks">Books</span>, <span data-lang-key="categorySportsOutdoors">Sports & Outdoors</span></p>
+                <div class="chart-modal-container">
+                    <canvas id="topCategoriesModalChart"></canvas>
+                </div>
+                <p><strong data-lang-key="modalRevenueContribution">Revenue contribution:</strong> <span data-lang-key="categoryElectronics">Electronics</span> (40%), <span data-lang-key="categoryApparel">Apparel</span> (25%)</p>
+                <p><strong data-lang-key="modalGrowthRate">Growth Rate:</strong> <span data-lang-key="categoryElectronics">Electronics</span> (+15%), <span data-lang-key="categoryApparel">Apparel</span> (+10%)</p>
+                <p class="modal-info-text" data-lang-key="modalTopCategoriesInfo">Insights into your best-performing product categories.</p>
+            </div>
+            <div class="modal-actions">
+                <button class="btn-primary close-modal-btn" data-lang-key="modalClose">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="trendingCategoriesModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 data-lang-key="modalTrendingCategoriesTitle">Trending Categories Details</h2>
+            <div class="modal-body-content">
+                <p><strong data-lang-key="modalCurrentlyTrending">Currently trending:</strong> <span data-lang-key="categoryElectronics">Electronics</span>, <span data-lang-key="categoryApparel">Apparel</span> (<span data-lang-key="modalDueToNewLaunches">due to new product launches</span>)</p>
+                <div class="chart-modal-container">
+                    <canvas id="trendingCategoriesModalChart"></canvas>
+                </div>
+                <p><strong data-lang-key="modalSearchVolumeIncrease">Search volume increase:</strong> <span data-lang-key="categoryElectronics">Electronics</span> (+20%), <span data-lang-key="categoryApparel">Apparel</span> (+15%)</p>
+                <p class="modal-info-text" data-lang-key="modalTrendingCategoriesInfo">Identify categories with increasing customer interest.</p>
+            </div>
+            <div class="modal-actions">
+                <button class="btn-primary close-modal-btn" data-lang-key="modalClose">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="categorizedProductsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 data-lang-key="modalCategorizedProductsTitle">Categorized Products Details</h2>
+            <div class="modal-body-content">
+                <p><strong data-lang-key="modalPercentage">Percentage:</strong> 80% <span data-lang-key="modalOfProductsAreCategorized">of products are categorized</span></p>
+                <div class="chart-modal-container">
+                    <canvas id="categorizedProductsModalChart"></canvas>
+                </div>
+                <p><strong data-lang-key="modalUncategorized">Uncategorized:</strong> 25 <span data-lang-key="modalProducts">products</span></p>
+                <p><strong data-lang-key="modalActionNeeded">Action needed:</strong> <span data-lang-key="modalCategorizeRemaining">Categorize remaining products for better discoverability.</span></p>
+                <p class="modal-info-text" data-lang-key="modalCategorizedProductsInfo">Ensure all products are correctly categorized for easy navigation.</p>
+            </div>
+            <div class="modal-actions">
+                <button class="btn-primary close-modal-btn" data-lang-key="modalClose">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="categoriesReviewModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 data-lang-key="modalCategoriesReviewTitle">Categories Needing Review Details</h2>
+            <div class="modal-body-content">
+                <p><strong data-lang-key="modalCount">Count:</strong> 2 <span data-lang-key="modalCategories">categories</span></p>
+                <div class="chart-modal-container">
+                    <canvas id="categoriesReviewModalChart"></canvas>
+                </div>
+                <p><strong data-lang-key="modalCategories">Categories:</strong> <span data-lang-key="modalOldElectronics">Old Electronics</span>, <span data-lang-key="modalNicheBooks">Niche Books</span></p>
+                <p><strong data-lang-key="modalReasons">Reasons:</strong> <span data-lang-key="modalOutdatedProducts">Outdated products</span>, <span data-lang-key="modalLowSalesVolume">Low sales volume</span></p>
+                <p class="modal-info-text" data-lang-key="modalCategoriesReviewInfo">Periodically review categories to keep your catalog relevant and optimized.</p>
+            </div>
+            <div class="modal-actions">
+                <button class="btn-primary close-modal-btn" data-lang-key="modalClose">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="viewCategoryModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 data-lang-key="modalCategoryDetailsTitle">Category Details <span id="viewCategoryId"></span></h2>
+            <p><strong data-lang-key="modalName">Name:</strong> <span id="viewCategoryName"></span></p>
+            <p><strong data-lang-key="modalTotalProducts">Total Products:</strong> <span id="viewCategoryTotalProducts"></span></p>
+            <p><strong data-lang-key="modalLastUpdated">Last Updated:</strong> <span id="viewCategoryLastUpdated"></span></p>
+            <p><strong data-lang-key="modalDescription">Description:</strong> <span id="viewCategoryDescription"></span></p>
+            <div class="modal-actions">
+                <button class="btn-primary close-modal-btn" data-lang-key="modalClose">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="editCategoryModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 data-lang-key="modalEditCategoryTitle">Edit Category <span id="editCategoryIdDisplay"></span></h2>
+            <form id="editCategoryForm">
+                <div class="form-group">
+                    <label for="editCategoryName" data-lang-key="modalCategoryName">Category Name</label>
+                    <input type="text" id="editCategoryName" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="editCategoryTotalProducts" data-lang-key="modalTotalProducts">Total Products</label>
+                    <input type="number" id="editCategoryTotalProducts" name="totalProducts" required>
+                </div>
+                <div class="form-group">
+                    <label for="editCategoryLastUpdated" data-lang-key="modalLastUpdated">Last Updated</label>
+                    <input type="text" id="editCategoryLastUpdated" name="lastUpdated" required>
+                </div>
+                <div class="form-group">
+                    <label for="editCategoryDescription" data-lang-key="modalDescription">Description</label>
+                    <textarea id="editCategoryDescription" name="description" rows="4"></textarea>
+                </div>
+                <input type="hidden" id="editOriginalCategoryId">
+                <div class="modal-actions">
+                    <button type="submit" class="btn-primary" data-lang-key="modalSaveChanges">Save Changes</button>
+                    <button type="button" class="btn-secondary close-modal-btn" data-lang-key="modalCancel">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="deleteCategoryConfirmModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 data-lang-key="modalConfirmDeletionTitle">Confirm Deletion</h2>
+            <p data-lang-key="modalDeleteCategoryConfirm">Are you sure you want to delete category <strong id="deleteCategoryIdDisplay"></strong>?</p>
+            <div class="modal-actions">
+                <button class="btn-danger confirm-delete-category-btn" data-lang-key="modalDelete">Delete</button>
+                <button class="btn-secondary close-modal-btn" data-lang-key="modalCancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="notificationsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 data-lang-key="modalAllNotificationsTitle">All Notifications</h2>
+            <div class="modal-body-content">
+                <div class="notification-full-list">
+                    <div class="notification-item-full">
+                        <span class="notification-icon new"><i class="fas fa-plus"></i></span>
+                        <div class="notification-content">
+                            <p data-lang-key="notificationNewOrderFull">New order received! Order ID: #ORD-001 from John Doe for $128.50.</p>
+                            <small>5 mins ago</small>
+                            <button class="btn-modern-sm mark-read-btn" data-lang-key="notificationMarkRead">Mark as Read</button>
+                        </div>
+                    </div>
+                    <div class="notification-item-full">
+                        <span class="notification-icon alert"><i class="fas fa-exclamation-triangle"></i></span>
+                        <div class="notification-content">
+                            <p data-lang-key="notificationLowStockFull">Critical low stock alert for "Laptop Pro X15". Only 5 units left.</p>
+                            <small>1 hour ago</small>
+                            <button class="btn-modern-sm mark-read-btn" data-lang-key="notificationMarkRead">Mark as Read</button>
+                        </div>
+                    </div>
+                    <div class="notification-item-full read">
+                        <span class="notification-icon"><i class="fas fa-check"></i></span>
+                        <div class="notification-content">
+                            <p data-lang-key="notificationUpdateAvailableFull">System update version 2.1.0 is available. Please update for new features.</p>
+                            <small>Yesterday</small>
+                            <button class="btn-modern-sm mark-unread-btn" data-lang-key="notificationMarkUnread">Mark as Unread</button>
+                        </div>
+                    </div>
+                    <div class="notification-item-full read">
+                        <span class="notification-icon"><i class="fas fa-info-circle"></i></span>
+                        <div class="notification-content">
+                            <p data-lang-key="notificationNewUserRegistered">A new user has registered: Sarah Johnson.</p>
+                            <small>2 days ago</small>
+                            <button class="btn-modern-sm mark-unread-btn" data-lang-key="notificationMarkUnread">Mark as Unread</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button class="btn-modern" data-lang-key="modalClearAll">Clear All</button>
+                <button class="btn-secondary close-modal-btn" data-lang-key="modalClose">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="messagesModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 data-lang-key="modalAllMessagesTitle">All Messages</h2>
+            <div class="modal-body-content">
+                <div class="message-full-list">
+                    <div class="message-item-full">
+                        <img src="assets/images/profile.jpg" alt="User" class="message-avatar">
+                        <div class="message-content">
+                            <p class="message-sender">Jane Doe</p>
+                            <p class="message-subject" data-lang-key="messageNewFeatureSubject">Subject: Inquiry about new feature rollout</p>
+                            <p class="message-preview" data-lang-key="messageNewFeatureDetail">"Hi team, I was wondering if there's any update on the new feature rollout described in the last meeting notes..."</p>
+                            <small>20 mins ago</small>
+                            <button class="btn-modern-sm view-message-btn" data-lang-key="messageViewDetails">View Details</button>
+                        </div>
+                    </div>
+                    <div class="message-item-full read">
+                        <img src="assets/images/profile.jpg" alt="User" class="message-avatar">
+                        <div class="message-content">
+                            <p class="message-sender">Alex Smith</p>
+                            <p class="message-subject" data-lang-key="messageFeedbackSubject">Subject: Feedback on monthly report</p>
+                            <p class="message-preview" data-lang-key="messageFeedbackDetail">"The monthly report was very insightful. Just had a small question about the Q3 projections..."</p>
+                            <small>1 hour ago</small>
+                            <button class="btn-modern-sm view-message-btn" data-lang-key="messageViewDetails">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button class="btn-modern" data-lang-key="modalComposeMessage">Compose Message</button>
+                <button class="btn-secondary close-modal-btn" data-lang-key="modalClose">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="myProfileModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 data-lang-key="modalMyProfileTitle">My Profile Details</h2>
+            <p><strong data-lang-key="modalName">Name:</strong> John Doe</p>
+            <p><strong data-lang-key="modalEmail">Email:</strong> john.doe@example.com</p>
+            <p><strong data-lang-key="modalRole">Role:</strong> Administrator</p>
+            <p class="modal-info-text" data-lang-key="modalMyProfileInfo">View and manage your personal profile information.</p>
+            <div class="modal-actions">
+                <button class="btn-primary close-modal-btn" data-lang-key="modalEditProfile">Edit Profile</button>
+                <button class="btn-secondary close-modal-btn" data-lang-key="modalClose">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="switchAccountModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 data-lang-key="modalSwitchAccountTitle">Switch Account</h2>
+            <p data-lang-key="modalSwitchAccountInfo">Select another account to switch to. You might need to re-authenticate.</p>
+            <div class="form-group">
+                <label for="accountSelect" data-lang-key="modalSelectAccount">Select Account</label>
+                <select id="accountSelect">
+                    <option value="account1">Account 1 (Main)</option>
+                    <option value="account2">Account 2 (Staging)</option>
+                </select>
+            </div>
+            <div class="modal-actions">
+                <button class="btn-primary" data-lang-key="modalSwitch">Switch</button>
+                <button class="btn-secondary close-modal-btn" data-lang-key="modalCancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="loginRegisterModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 data-lang-key="modalLoginRegisterTitle">Login / Register</h2>
+            <p data-lang-key="modalLoginRegisterInfo">You are currently logged in. This modal simulates redirecting to login/registration forms.</p>
+            <div class="modal-actions">
+                <button class="btn-primary" data-lang-key="modalGoToLogin">Go to Login</button>
+                <button class="btn-secondary close-modal-btn" data-lang-key="modalClose">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="logoutModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 data-lang-key="modalLogoutTitle">Confirm Logout</h2>
+            <p data-lang-key="modalLogoutConfirm">Are you sure you want to log out of DashPro?</p>
+            <div class="modal-actions">
+                <button class="btn-danger" data-lang-key="profileLogout">Log Out</button>
+                <button class="btn-secondary close-modal-btn" data-lang-key="modalCancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="toastNotification" class="toast-notification">
+        <i class="fas fa-check-circle"></i> <span></span>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    
+    <script src="assets/js/main.js"></script>
+    
+    <script src="assets/js/categories.js"></script>
+</body>
+</html>

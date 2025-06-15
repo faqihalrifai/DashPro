@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang-key="menuProducts">DashPro - Products</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/core.css">
+</head>
+<body class="products-page">
+    <div class="app-container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <i class="fas fa-rocket fa-2x"></i>
+                <h2>DashPro</h2>
+                <button class="close-sidebar" aria-label="Close Sidebar">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="sidebar-menu">
+                <p class="menu-title" data-lang-key="menuMain">Main</p>
+                <div class="menu-item">
+                    <a href="index.html" class="menu-link">
+                        <i class="fas fa-home"></i>
+                        <span data-lang-key="menuDashboard">Dashboard</span>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a href="analytics.html" class="menu-link">
+                        <i class="fas fa-chart-line"></i>
+                        <span data-lang-key="menuAnalytics">Analytics</span>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a href="orders.html" class="menu-link">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span data-lang-key="menuOrders">Orders</span>
+                        <span class="badge">15</span>
+                    </a>
+                </div>
+
+                <p class="menu-title" data-lang-key="menuManagement">Management</p>
+                <div class="menu-item">
+                    <a href="users.html" class="menu-link">
+                        <i class="fas fa-users"></i>
+                        <span data-lang-key="menuUsers">Users</span>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a href="products.html" class="menu-link active">
+                        <i class="fas fa-box"></i>
+                        <span data-lang-key="menuProducts">Products</span>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a href="categories.html" class="menu-link">
+                        <i class="fas fa-list"></i>
+                        <span data-lang-key="menuCategories">Categories</span>
+                    </a>
+                </div>
+
+                <p class="menu-title" data-lang-key="menuSettings">Settings</p>
+                <div class="menu-item">
+                    <a href="settings.html" class="menu-link">
+                        <i class="fas fa-cog"></i>
+                        <span data-lang-key="menuSettings">Settings</span>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a href="help.html" class="menu-link">
+                        <i class="fas fa-question-circle"></i>
+                        <span data-lang-key="menuHelp">Help</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="header">
+                <button class="toggle-sidebar">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <div class="header-right">
+                    <div class="header-icon dropdown-toggle" id="notificationsToggle">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">5</span> <div class="dropdown-menu notifications-menu" id="notificationsMenu">
+                            <h4 data-lang-key="headerNotificationsTitle">Notifications</h4>
+                            <div class="notification-item">
+                                <span class="notification-icon new"><i class="fas fa-plus"></i></span>
+                                <div class="notification-content">
+                                    <p data-lang-key="notificationNewOrder">New order received! <strong data-lang-key="notificationOrderId">#ORD-001</strong></p>
+                                    <small>5 mins ago</small>
+                                </div>
+                            </div>
+                            <div class="notification-item">
+                                <span class="notification-icon alert"><i class="fas fa-exclamation-triangle"></i></span>
+                                <div class="notification-content">
+                                    <p data-lang-key="notificationLowStock">Product <strong data-lang-key="notificationProductA">"Product A"</strong> is low in stock.</p>
+                                    <small>1 hour ago</small>
+                                </div>
+                            </div>
+                            <div class="notification-item read">
+                                <span class="notification-icon"><i class="fas fa-check"></i></span>
+                                <div class="notification-content">
+                                    <p data-lang-key="notificationUpdateAvailable">System update available.</p>
+                                    <small>Yesterday</small>
+                                </div>
+                            </div>
+                            <a href="#" class="dropdown-footer" data-action="view-all-notifications" data-modal-target="notificationsModal" data-lang-key="headerViewAllNotifications">View All Notifications</a>
+                        </div>
+                    </div>
+
+                    <div class="header-icon dropdown-toggle" id="messagesToggle">
+                        <i class="fas fa-envelope"></i>
+                        <span class="message-badge">2</span> <div class="dropdown-menu messages-menu" id="messagesMenu">
+                            <h4 data-lang-key="headerMessagesTitle">Messages</h4>
+                            <div class="message-item">
+                                <img src="assets/images/profile.jpg" alt="User" class="message-avatar">
+                                <div class="message-content">
+                                    <p class="message-sender">Jane Doe</p>
+                                    <p class="message-preview" data-lang-key="messageNewFeatureInquiry">Inquiry about new feature...</p>
+                                    <small>20 mins ago</small>
+                                </div>
+                            </div>
+                            <div class="message-item">
+                                <img src="assets/images/profile.jpg" alt="User" class="message-avatar">
+                                <div class="message-content">
+                                    <p class="message-sender">Alex Smith</p>
+                                    <p class="message-preview" data-lang-key="messageFeedbackOnReport">Feedback on monthly report...</p>
+                                    <small>1 hour ago</small>
+                                </div>
+                            </div>
+                            <a href="#" class="dropdown-footer" data-action="view-all-messages" data-modal-target="messagesModal" data-lang-key="headerViewAllMessages">View All Messages</a>
+                        </div>
+                    </div>
+
+                    <div class="header-icon dropdown-toggle" id="languageToggle">
+                        <i class="fas fa-globe"></i>
+                        <div class="dropdown-menu language-menu" id="languageMenu">
+                            <a href="#" class="dropdown-item language-select active" data-lang="id">
+                                <span class="flag-icon id"></span> <span data-lang-key="languageIndonesian">Bahasa Indonesia</span>
+                            </a>
+                            <a href="#" class="dropdown-item language-select" data-lang="en">
+                                <span class="flag-icon en"></span> <span data-lang-key="languageEnglish">English</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="header-icon dropdown-toggle" id="themeToggle">
+                        <i class="fas fa-palette"></i>
+                        <div class="dropdown-menu theme-menu" id="themeMenu">
+                            <h4 data-lang-key="menuSettings">Theme Settings</h4>
+                            
+                            <div class="theme-option">
+                                <span data-lang-key="settingsThemePrimaryColor">Primary Color</span>
+                                <div class="color-picker-group">
+                                    <button class="color-dot active" data-color="#5a67d8" style="background-color: #5a67d8;"></button>
+                                    <button class="color-dot" data-color="#007bff" style="background-color: #007bff;"></button>
+                                    <button class="color-dot" data-color="#28a745" style="background-color: #28a745;"></button>
+                                    <button class="color-dot" data-color="#dc3545" style="background-color: #dc3545;"></button>
+                                    <input type="color" id="customPrimaryColorInput" value="#5a67d8" class="color-dot" title="Choose a custom color">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="user-profile profile-toggle" id="profileToggle">
+                        <img src="assets/images/profile.jpg" alt="User">
+                        <div class="user-info">
+                            <h4>John Doe</h4>
+                            <span>Administrator</span>
+                        </div>
+                        <div class="dropdown-menu profile-menu" id="profileMenu">
+                            <div class="profile-summary">
+                                <img src="assets/images/profile.jpg" alt="User">
+                                <div class="info">
+                                    <h5>John Doe</h5>
+                                    <small>john.doe@example.com</small>
+                                </div>
+                            </div>
+                            <a href="#" class="dropdown-item" data-action="my-profile" data-modal-target="myProfileModal"><i class="fas fa-user"></i> <span data-lang-key="profileMyProfile">My Profile</span></a>
+                            <a href="settings.html" class="dropdown-item"><i class="fas fa-cog"></i> <span data-lang-key="profileAccountSettings">Account Settings</span></a>
+                            <a href="#" class="dropdown-item" data-action="switch-account" data-modal-target="switchAccountModal"><i class="fas fa-users"></i> <span data-lang-key="profileSwitchAccount">Switch Account</span></a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" class="dropdown-item" data-action="login-register" data-modal-target="loginRegisterModal"><i class="fas fa-sign-in-alt"></i> <span data-lang-key="profileLoginRegister">Login / Register</span></a>
+                            <a href="#" class="dropdown-item logout-btn" data-action="logout" data-modal-target="logoutModal"><i class="fas fa-sign-out-alt"></i> <span data-lang-key="profileLogout">Log Out</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="page-header">
+                    <h1 data-lang-key="menuProducts">Product Management</h1>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item" data-lang-key="breadcrumbHome">Home</li>
+                        <li class="breadcrumb-item active" data-lang-key="menuProducts">Products</li>
+                    </ul>
+                </div>
+
+                <div class="table-container">
+                    <div class="table-header">
+                        <h3 data-lang-key="productsProductList">Product List</h3>
+                        <div class="search-box">
+                            <i class="fas fa-search"></i>
+                            <input type="text" id="someUniqueId" name="someFieldName" placeholder="Enter something..." data-lang-key="searchProductsPlaceholder" aria-label="Search products">
+                        </div>
+                        <button class="btn-primary" id="addProductBtn"><i class="fas fa-plus"></i> <span data-lang-key="productsAddProduct">Add Product</span></button>
+                    </div>
+
+                    <table id="productsTable">
+                        <thead>
+                            <tr>
+                                <th data-lang-key="productsTableHeaderProductID">Product ID</th>
+                                <th data-lang-key="productsTableHeaderName">Name</th>
+                                <th data-lang-key="productsTableHeaderCategory">Category</th>
+                                <th data-lang-key="productsTableHeaderPrice">Price</th>
+                                <th data-lang-key="productsTableHeaderStock">Stock</th>
+                                <th data-lang-key="productsTableHeaderStatus">Status</th>
+                                <th data-lang-key="tableHeaderActions">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr data-product-id="#PRO-001" data-name="Laptop Pro X15" data-category="Electronics" data-price="$1299.99" data-stock="50" data-status="Active">
+                                <td>#PRO-001</td>
+                                <td>Laptop Pro X15</td>
+                                <td><span data-lang-key="categoryElectronics">Electronics</span></td>
+                                <td>$1299.99</td>
+                                <td>50</td>
+                                <td><span class="status active" data-lang-key="statusActive">Active</span></td>
+                                <td class="table-actions">
+                                    <button class="action-btn view-images" data-product="Laptop Pro X15" data-images="assets/images/products.jpg" title="View Images" aria-label="View images for Laptop Pro X15"><i class="fas fa-image"></i></button>
+                                    <button class="action-btn edit-product" title="Edit" aria-label="Edit Laptop Pro X15"><i class="fas fa-edit"></i></button>
+                                    <button class="action-btn delete-product" title="Delete" aria-label="Delete Laptop Pro X15"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr data-product-id="#PRO-002" data-name="Running Shoes M21" data-category="Fashion" data-price="$89.99" data-stock="120" data-status="Active">
+                                <td>#PRO-002</td>
+                                <td>Running Shoes M21</td>
+                                <td><span data-lang-key="categoryFashion">Fashion</span></td>
+                                <td>$89.99</td>
+                                <td>120</td>
+                                <td><span class="status active" data-lang-key="statusActive">Active</span></td>
+                                <td class="table-actions">
+                                     <button class="action-btn view-images" data-product="Running Shoes M21" data-images="assets/images/products.jpg" title="View Images" aria-label="View images for Running Shoes M21"><i class="fas fa-image"></i></button>
+                                    <button class="action-btn edit-product" title="Edit" aria-label="Edit Running Shoes M21"><i class="fas fa-edit"></i></button>
+                                    <button class="action-btn delete-product" title="Delete" aria-label="Delete Running Shoes M21"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr data-product-id="#PRO-003" data-name="Coffee Maker CM500" data-category="Home Goods" data-price="$49.99" data-stock="30" data-status="Inactive">
+                                <td>#PRO-003</td>
+                                <td>Coffee Maker CM500</td>
+                                <td><span data-lang-key="categoryHomeGoods">Home Goods</span></td>
+                                <td>$49.99</td>
+                                <td>30</td>
+                                <td><span class="status inactive" data-lang-key="statusInactive">Inactive</span></td>
+                                <td class="table-actions">
+                                     <button class="action-btn view-images" data-product="Coffee Maker CM500" data-images="assets/images/products.jpg" title="View Images" aria-label="View images for Coffee Maker CM500"><i class="fas fa-image"></i></button>
+                                    <button class="action-btn edit-product" title="Edit" aria-label="Edit Coffee Maker CM500"><i class="fas fa-edit"></i></button>
+                                    <button class="action-btn delete-product" title="Delete" aria-label="Delete Coffee Maker CM500"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr data-product-id="#PRO-004" data-name="The Great Novel" data-category="Books" data-price="$19.99" data-stock="200" data-status="Active">
+                                <td>#PRO-004</td>
+                                <td>The Great Novel</td>
+                                <td><span data-lang-key="categoryBooks">Books</span></td>
+                                <td>$19.99</td>
+                                <td>200</td>
+                                <td><span class="status active" data-lang-key="statusActive">Active</span></td>
+                                 <td class="table-actions">
+                                     <button class="action-btn view-images" data-product="The Great Novel" data-images="assets/images/products.jpg" title="View Images" aria-label="View images for The Great Novel"><i class="fas fa-image"></i></button>
+                                    <button class="action-btn edit-product" title="Edit" aria-label="Edit The Great Novel"><i class="fas fa-edit"></i></button>
+                                    <button class="action-btn delete-product" title="Delete" aria-label="Delete The Great Novel"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr data-product-id="#PRO-005" data-name="Wireless Headphones" data-category="Electronics" data-price="$79.99" data-stock="75" data-status="Active">
+                                <td>#PRO-005</td>
+                                <td>Wireless Headphones</td>
+                                <td><span data-lang-key="categoryElectronics">Electronics</span></td>
+                                <td>$79.99</td>
+                                <td>75</td>
+                                <td><span class="status active" data-lang-key="statusActive">Active</span></td>
+                                <td class="table-actions">
+                                     <button class="action-btn view-images" data-product="Wireless Headphones" data-images="assets/images/products.jpg" title="View Images" aria-label="View images for Wireless Headphones"><i class="fas fa-image"></i></button>
+                                    <button class="action-btn edit-product" title="Edit" aria-label="Edit Wireless Headphones"><i class="fas fa-edit"></i></button>
+                                    <button class="action-btn delete-product" title="Delete" aria-label="Delete Wireless Headphones"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="cards-row" style="margin-top: 25px;">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon bg-primary">
+                                <i class="fas fa-box"></i>
+                            </div>
+                            <div class="card-info">
+                                <h3>125</h3>
+                                <p data-lang-key="productsTotalProducts">Total Products</p>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="trend"><i class="fas fa-arrow-up"></i> 5% <span data-lang-key="increase">increase</span></span>
+                            <button class="btn-details" data-modal-target="totalProductsModal" data-lang-key="detailsBtn" aria-label="Details for Total Products">Details</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon bg-success">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="card-info">
+                                <h3>110</h3>
+                                <p data-lang-key="productsActiveProducts">Active Products</p>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="trend"><i class="fas fa-arrow-up"></i> 2% <span data-lang-key="increase">increase</span></span>
+                             <button class="btn-details" data-modal-target="activeProductsModal" data-lang-key="detailsBtn" aria-label="Details for Active Products">Details</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon bg-warning">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <div class="card-info">
+                                <h3>15</h3>
+                                <p data-lang-key="productsInactiveProducts">Inactive Products</p>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="trend decrease"><i class="fas fa-arrow-down"></i> 1% <span data-lang-key="decrease">decrease</span></span>
+                             <button class="btn-details" data-modal-target="inactiveProductsModal" data-lang-key="detailsBtn" aria-label="Details for Inactive Products">Details</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon bg-info">
+                                <i class="fas fa-dollar-sign"></i>
+                            </div>
+                            <div class="card-info">
+                                <h3>$15,000</h3>
+                                <p data-lang-key="productsTotalSales">Total Sales</p>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="trend"><i class="fas fa-arrow-up"></i> 8% <span data-lang-key="increase">increase</span></span>
+                             <button class="btn-details" data-modal-target="totalSalesModal" data-lang-key="detailsBtn" aria-label="Details for Total Sales">Details</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon bg-secondary">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="card-info">
+                                <h3>4.5</h3>
+                                <p data-lang-key="productsAverageRating">Average Rating</p>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="trend"><i class="fas fa-arrow-up"></i> 0.2 <span data-lang-key="increase">increase</span></span>
+                             <button class="btn-details" data-modal-target="averageRatingModal" data-lang-key="detailsBtn" aria-label="Details for Average Rating">Details</button>
+                        </div>
+                    </div>
+                    <div class="card"> <div class="card-header">
+                            <div class="card-icon bg-danger">
+                                <i class="fas fa-boxes"></i>
+                            </div>
+                            <div class="card-info">
+                                <h3>5</h3>
+                                <p data-lang-key="productsLowStockProducts">Low Stock Products</p>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="trend decrease"><i class="fas fa-arrow-down"></i> 0% <span data-lang-key="change">change</span></span>
+                             <button class="btn-details" data-modal-target="lowStockProductsModal" data-lang-key="detailsBtn" aria-label="Details for Low Stock Products">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer">
+                <p data-lang-key="footerText">&copy; 2023 DashPro. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="totalProductsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 data-lang-key="modalTotalProductsTitle">Total Products Details</h2>
+            <div class="modal-body-content">
+                <p><strong data-lang-key="modalTotal">Total:</strong> 125 <span data-lang-key="modalProducts">products</span></p>
+                <div class="chart-modal-container">
+                    <canvas id="totalProductsModalChart"></canvas>
+                </div>
+                <p><strong data-lang-key="modalCategories">Categories:</strong> <span data-lang-key="categoryElectronics">Electronics</span>, <span data-lang-key="categoryFashion">Fashion</span>, <span data-lang-key="categoryHomeGoods">Home Goods</span>, <span data-lang-key="categoryBooks">Books</span></p>
+                <p><strong data-lang-key="modalNewProductsThisMonth">New products this month:</strong> 10</p>
+                <p class="modal-info-text" data-lang-key="modalTotalProductsInfo">Manage your entire product catalog.</p>
+            </div>
+            <div class="modal-actions">
+                <button class="btn-primary close-modal-btn" data-lang-key="modalClose">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="activeProductsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 data-lang-key="modalActiveProductsTitle">Active Products Details</h2>
+            <div class="modal-body-content">
+                <p><strong data-lang-key="modalTotal">Total:</strong> 110 <span data-lang-key="modalProducts">products</span></p>
+                <div class="chart-modal-container">
+                    <canvas id="activeProductsModalChart"></canvas>
+                </div>
+                <p><strong data-lang-key="modalTopSellingCategories">Top selling categories:</strong> <span data-lang-key="categoryElectronics">Electronics</span>, <span data-lang-key="categoryFashion">Fashion</span></p>
+                <p><strong data-lang-key="modalAverageConversionRate">Average conversion rate:</strong> 2.5%</p>
+                <p class="modal-info-text" data-lang-key="modalActiveProductsInfo">Monitor the performance of your active products.</p>
+            </div>
+            <div class="modal-actions">
+                <button class="btn-primary close-modal-btn" data-lang-key="modalClose">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="inactiveProductsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 data-lang-key="modalInactiveProductsTitle">Inactive Products Details</h2>
+            <div class="modal-body-content">
+                <p><strong data-lang-key="modalTotal">Total:</strong> 15 <span data-lang-key="modalProducts">products</span></p>
+                <div class="chart-modal-container">
+                    <canvas id="inactiveProductsModalChart"></canvas>
+                </div>
+                <p><strong data-lang-key="modalPotentialReasons">Potential reasons:</strong> <span data-lang-key="modalOutOfStock">Out of stock</span>, <span data-lang-key="modalDiscontinued">Discontinued</span></p>
+                <p><strong data-lang-key="modalLastUpdated">Last updated:</strong> 2 <span data-lang-key="modalWeeksAgo">weeks ago</span></p>
+                 <p class="modal-info-text" data-lang-key="modalInactiveProductsInfo">Identify inactive products for potential updates or removal.</p>
+            </div>
+            <div class="modal-actions">
+                <button class="btn-primary close-modal-btn" data-lang-key="modalClose">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="totalSalesModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 data-lang-key="modalTotalSalesTitle">Total Sales Details</h2>
+            <div class="modal-body-content">
+                <p><strong data-lang-key="modalTotalRevenue">Total revenue:</strong> $15,000</p>
+                <div class="chart-modal-container">
+                    <canvas id="totalSalesModalChart"></canvas>
+                </div>
+                <p><strong data-lang-key="modalTopSellingProduct">Top selling product:</strong> Laptop Pro X15</p>
+                <p><strong data-lang-key="modalAverageOrderValue">Average order value:</strong> $75</p>
+                 <p class="modal-info-text" data-lang-key="modalTotalSalesInfo">Track your overall product sales and performance.</p>
+            </div>
+            <div class="modal-actions">
+                <button class="btn-primary close-modal-btn" data-lang-key="modalClose">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="averageRatingModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 data-lang-key="modalAverageRatingTitle">Average Rating Details</h2>
+            <div class="modal-body-content">
+                <p><strong data-lang-key="modalAverageRating">Average rating:</strong> 4.5 <span data-lang-key="modalStars">stars</span></p>
+                <div class="chart-modal-container">
+                    <canvas id="averageRatingModalChart"></canvas>
+                </div>
+                <p><strong data-lang-key="modalTotalReviews">Total reviews:</strong> 500</p>
+                <p><strong data-lang-key="modalMostReviewedProduct">Most reviewed product:</strong> Laptop Pro X15</p>
+                 <p class="modal-info-text" data-lang-key="modalAverageRatingInfo">Monitor customer satisfaction with your products.</p>
+            </div>
+            <div class="modal-actions">
+                <button class="btn-primary close-modal-btn" data-lang-key="modalClose">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="lowStockProductsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 data-lang-key="modalLowStockProductsTitle">Low Stock Products Details</h2>
+            <div class="modal-body-content">
+                <p><strong data-lang-key="modalCount">Count:</strong> 5 <span data-lang-key="modalProducts">products</span></p>
+                <div class="chart-modal-container">
+                    <canvas id="lowStockProductsModalChart"></canvas>
+                </div>
+                <p><strong data-lang-key="modalExampleProducts">Example products:</strong> Coffee Maker CM500, ...</p>
+                <p><strong data-lang-key="modalActionNeeded">Action needed:</strong> <span data-lang-key="modalRestock">Restock</span>, <span data-lang-key="modalNotifySupplier">Notify supplier</span></p>
+                 <p class="modal-info-text" data-lang-key="modalLowStockProductsInfo">Ensure you don't run out of popular products.</p>
+            </div>
+            <div class="modal-actions">
+                <button class="btn-primary close-modal-btn" data-lang-key="modalClose">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="imageGalleryModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 id="galleryProductName" data-lang-key="productsProductImages">Product Images</h2>
+            <div class="gallery-images-container">
+                </div>
+            <div class="modal-actions">
+                <button class="btn-primary close-modal-btn" data-lang-key="modalClose">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="myProfileModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 data-lang-key="modalMyProfileTitle">My Profile Details</h2>
+            <p><strong data-lang-key="modalName">Name:</strong> John Doe</p>
+            <p><strong data-lang-key="modalEmail">Email:</strong> john.doe@example.com</p>
+            <p><strong data-lang-key="modalRole">Role:</strong> Administrator</p>
+            <p class="modal-info-text" data-lang-key="modalMyProfileInfo">View and manage your personal profile information.</p>
+            <div class="modal-actions">
+                <button class="btn-primary close-modal-btn" data-lang-key="modalEditProfile">Edit Profile</button>
+                <button class="btn-secondary close-modal-btn" data-lang-key="modalClose">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="switchAccountModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 data-lang-key="modalSwitchAccountTitle">Switch Account</h2>
+            <p data-lang-key="modalSwitchAccountInfo">Select another account to switch to. You might need to re-authenticate.</p>
+            <div class="form-group">
+                <label for="accountSelect" data-lang-key="modalSelectAccount">Select Account</label>
+                <select id="accountSelect">
+                    <option value="account1">Account 1 (Main)</option>
+                    <option value="account2">Account 2 (Staging)</option>
+                </select>
+            </div>
+            <div class="modal-actions">
+                <button class="btn-primary" data-lang-key="modalSwitch">Switch</button>
+                <button class="btn-secondary close-modal-btn" data-lang-key="modalCancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="loginRegisterModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 data-lang-key="modalLoginRegisterTitle">Login / Register</h2>
+            <p data-lang-key="modalLoginRegisterInfo">You are currently logged in. This modal simulates redirecting to login/registration forms.</p>
+            <div class="modal-actions">
+                <button class="btn-primary" data-lang-key="modalGoToLogin">Go to Login</button>
+                <button class="btn-secondary close-modal-btn" data-lang-key="modalClose">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="logoutModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 data-lang-key="modalLogoutTitle">Confirm Logout</h2>
+            <p data-lang-key="modalLogoutConfirm">Are you sure you want to log out of DashPro?</p>
+            <div class="modal-actions">
+                <button class="btn-danger" data-lang-key="profileLogout">Log Out</button>
+                <button class="btn-secondary close-modal-btn" data-lang-key="modalCancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="editProductModal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2 data-lang-key="modalEditProductTitle">Edit Product <span id="editProductIdDisplay"></span></h2>
+        <form id="editProductForm">
+            <div class="form-group">
+                <label for="editProductName" data-lang-key="productsTableHeaderName">Product Name</label>
+                <input type="text" id="editProductName" name="productName" autocomplete="name" required>
+            </div>
+            <div class="form-group">
+                <label for="editProductCategory" data-lang-key="productsTableHeaderCategory">Category</label>
+                <select id="editProductCategory" name="productCategory" autocomplete="off">
+                    <option value="Electronics" data-lang-key="categoryElectronics">Electronics</option>
+                    <option value="Fashion" data-lang-key="categoryFashion">Fashion</option>
+                    <option value="Home Goods" data-lang-key="categoryHomeGoods">Home Goods</option>
+                    <option value="Books" data-lang-key="categoryBooks">Books</option>
+                    <option value="Sports & Outdoors" data-lang-key="categorySportsOutdoors">Sports & Outdoors</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="editProductPrice" data-lang-key="productsTableHeaderPrice">Price</label>
+                <input type="text" id="editProductPrice" name="productPrice" autocomplete="off" required>
+            </div>
+            <div class="form-group">
+                <label for="editProductStock" data-lang-key="productsTableHeaderStock">Stock</label>
+                <input type="number" id="editProductStock" name="productStock" autocomplete="off" required>
+            </div>
+            <div class="form-group">
+                <label for="editProductStatus" data-lang-key="productsTableHeaderStatus">Status</label>
+                <select id="editProductStatus" name="productStatus" autocomplete="off">
+                    <option value="Active" data-lang-key="statusActive">Active</option>
+                    <option value="Inactive" data-lang-key="statusInactive">Inactive</option>
+                    <option value="Low Stock" data-lang-key="statusLowStock">Low Stock</option>
+                </select>
+            </div>
+            <input type="hidden" id="editOriginalProductId" name="originalProductId">
+            <div class="modal-actions">
+                <button type="submit" class="btn-primary" data-lang-key="modalSaveChanges">Save Changes</button>
+                <button type="button" class="btn-secondary close-modal-btn" data-lang-key="modalCancel">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+    <div id="deleteProductConfirmModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 data-lang-key="modalConfirmDeletionTitle">Confirm Deletion</h2>
+            <p data-lang-key="modalDeleteProductConfirm">Are you sure you want to delete product <strong id="deleteProductIdDisplay"></strong>?</p>
+            <div class="modal-actions">
+                <button class="btn-danger confirm-delete-product-btn" data-lang-key="modalDelete">Delete</button>
+                <button class="btn-secondary close-modal-btn" data-lang-key="modalCancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="toastNotification" class="toast-notification">
+        <i class="fas fa-check-circle"></i> <span></span>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <script src="assets/js/main.js"></script>
+    
+    <script src="assets/js/products.js"></script>
+</body>
+</html>

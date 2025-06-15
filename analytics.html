@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang-key="menuAnalytics">DashPro - Analytics</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/core.css">
+</head>
+<body class="analytics-page">
+    <div class="app-container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <i class="fas fa-rocket fa-2x"></i>
+                <h2>DashPro</h2>
+                <button class="close-sidebar" aria-label="Close Sidebar">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="sidebar-menu">
+                <p class="menu-title" data-lang-key="menuMain">Main</p>
+                <div class="menu-item">
+                    <a href="index.html" class="menu-link">
+                        <i class="fas fa-home"></i>
+                        <span data-lang-key="menuDashboard">Dashboard</span>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a href="analytics.html" class="menu-link active">
+                        <i class="fas fa-chart-line"></i>
+                        <span data-lang-key="menuAnalytics">Analytics</span>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a href="orders.html" class="menu-link">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span data-lang-key="menuOrders">Orders</span>
+                        <span class="badge">15</span>
+                    </a>
+                </div>
+
+                <p class="menu-title" data-lang-key="menuManagement">Management</p>
+                <div class="menu-item">
+                    <a href="users.html" class="menu-link">
+                        <i class="fas fa-users"></i>
+                        <span data-lang-key="menuUsers">Users</span>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a href="products.html" class="menu-link">
+                        <i class="fas fa-box"></i>
+                        <span data-lang-key="menuProducts">Products</span>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a href="categories.html" class="menu-link">
+                        <i class="fas fa-list"></i>
+                        <span data-lang-key="menuCategories">Categories</span>
+                    </a>
+                </div>
+
+                <p class="menu-title" data-lang-key="menuSettings">Settings</p>
+                <div class="menu-item">
+                    <a href="settings.html" class="menu-link">
+                        <i class="fas fa-cog"></i>
+                        <span data-lang-key="menuSettings">Settings</span>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a href="help.html" class="menu-link">
+                        <i class="fas fa-question-circle"></i>
+                        <span data-lang-key="menuHelp">Help</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="header">
+                <button class="toggle-sidebar">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <div class="header-right">
+                    <div class="header-icon dropdown-toggle" id="notificationsToggle">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">5</span> <div class="dropdown-menu notifications-menu" id="notificationsMenu">
+                            <h4 data-lang-key="headerNotificationsTitle">Notifications</h4>
+                            <div class="notification-item">
+                                <span class="notification-icon new"><i class="fas fa-plus"></i></span>
+                                <div class="notification-content">
+                                    <p data-lang-key="notificationNewOrder">New order received! <strong data-lang-key="notificationOrderId">#ORD-001</strong></p>
+                                    <small>5 mins ago</small>
+                                </div>
+                            </div>
+                            <div class="notification-item">
+                                <span class="notification-icon alert"><i class="fas fa-exclamation-triangle"></i></span>
+                                <div class="notification-content">
+                                    <p data-lang-key="notificationLowStock">Product <strong data-lang-key="notificationProductA">"Product A"</strong> is low in stock.</p>
+                                    <small>1 hour ago</small>
+                                </div>
+                            </div>
+                            <div class="notification-item read">
+                                <span class="notification-icon"><i class="fas fa-check"></i></span>
+                                <div class="notification-content">
+                                    <p data-lang-key="notificationUpdateAvailable">System update available.</p>
+                                    <small>Yesterday</small>
+                                </div>
+                            </div>
+                            <a href="#" class="dropdown-footer" data-action="view-all-notifications" data-modal-target="notificationsModal" data-lang-key="headerViewAllNotifications">View All Notifications</a>
+                        </div>
+                    </div>
+
+                    <div class="header-icon dropdown-toggle" id="messagesToggle">
+                        <i class="fas fa-envelope"></i>
+                        <span class="message-badge">2</span> <div class="dropdown-menu messages-menu" id="messagesMenu">
+                            <h4 data-lang-key="headerMessagesTitle">Messages</h4>
+                            <div class="message-item">
+                                <img src="assets/images/profile.jpg" alt="User" class="message-avatar">
+                                <div class="message-content">
+                                    <p class="message-sender">Jane Doe</p>
+                                    <p class="message-preview" data-lang-key="messageNewFeatureInquiry">Inquiry about new feature...</p>
+                                    <small>20 mins ago</small>
+                                </div>
+                            </div>
+                            <div class="message-item">
+                                <img src="assets/images/profile.jpg" alt="User" class="message-avatar">
+                                <div class="message-content">
+                                    <p class="message-sender">Alex Smith</p>
+                                    <p class="message-preview" data-lang-key="messageFeedbackOnReport">Feedback on monthly report...</p>
+                                    <small>1 hour ago</small>
+                                </div>
+                            </div>
+                            <a href="#" class="dropdown-footer" data-action="view-all-messages" data-modal-target="messagesModal" data-lang-key="headerViewAllMessages">View All Messages</a>
+                        </div>
+                    </div>
+
+                    <div class="header-icon dropdown-toggle" id="languageToggle">
+                        <i class="fas fa-globe"></i>
+                        <div class="dropdown-menu language-menu" id="languageMenu">
+                            <a href="#" class="dropdown-item language-select active" data-lang="id">
+                                <span class="flag-icon id"></span> <span data-lang-key="languageIndonesian">Bahasa Indonesia</span>
+                            </a>
+                            <a href="#" class="dropdown-item language-select" data-lang="en">
+                                <span class="flag-icon en"></span> <span data-lang-key="languageEnglish">English</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="header-icon dropdown-toggle" id="themeToggle">
+                        <i class="fas fa-palette"></i>
+                        <div class="dropdown-menu theme-menu" id="themeMenu">
+                            <h4 data-lang-key="menuSettings">Theme Settings</h4>
+                            
+                            <div class="theme-option">
+                                <span data-lang-key="settingsThemePrimaryColor">Primary Color</span>
+                                <div class="color-picker-group">
+                                    <button class="color-dot active" data-color="#5a67d8" style="background-color: #5a67d8;"></button>
+                                    <button class="color-dot" data-color="#007bff" style="background-color: #007bff;"></button>
+                                    <button class="color-dot" data-color="#28a745" style="background-color: #28a745;"></button>
+                                    <button class="color-dot" data-color="#dc3545" style="background-color: #dc3545;"></button>
+                                    <input type="color" id="customPrimaryColorInput" value="#5a67d8" class="color-dot" title="Choose a custom color">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="user-profile profile-toggle" id="profileToggle">
+                        <img src="assets/images/profile.jpg" alt="User">
+                        <div class="user-info">
+                            <h4>John Doe</h4>
+                            <span>Administrator</span>
+                        </div>
+                        <div class="dropdown-menu profile-menu" id="profileMenu">
+                            <div class="profile-summary">
+                                <img src="assets/images/profile.jpg" alt="User">
+                                <div class="info">
+                                    <h5>John Doe</h5>
+                                    <small>john.doe@example.com</small>
+                                </div>
+                            </div>
+                            <a href="#" class="dropdown-item" data-action="my-profile" data-modal-target="myProfileModal"><i class="fas fa-user"></i> <span data-lang-key="profileMyProfile">My Profile</span></a>
+                            <a href="settings.html" class="dropdown-item"><i class="fas fa-cog"></i> <span data-lang-key="profileAccountSettings">Account Settings</span></a>
+                            <a href="#" class="dropdown-item" data-action="switch-account" data-modal-target="switchAccountModal"><i class="fas fa-users"></i> <span data-lang-key="profileSwitchAccount">Switch Account</span></a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" class="dropdown-item" data-action="login-register" data-modal-target="loginRegisterModal"><i class="fas fa-sign-in-alt"></i> <span data-lang-key="profileLoginRegister">Login / Register</span></a>
+                            <a href="#" class="dropdown-item logout-btn" data-action="logout" data-modal-target="logoutModal"><i class="fas fa-sign-out-alt"></i> <span data-lang-key="profileLogout">Log Out</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="page-header">
+                    <h1 data-lang-key="menuAnalytics">Analytics Overview</h1>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item" data-lang-key="breadcrumbHome">Home</li>
+                        <li class="breadcrumb-item active" data-lang-key="menuAnalytics">Analytics</li>
+                    </ul>
+                </div>
+
+                <div class="filter-controls" style="margin-bottom: 20px; display: flex; justify-content: flex-end;">
+                    <div class="date-range-filter-group">
+                        <button class="filter-btn active" data-range="last30days" data-lang-key="dateFilterLast30Days">Last 30 Days</button>
+                        <button class="filter-btn" data-range="last7days" data-lang-key="dateFilterLast7Days">Last 7 Days</button>
+                        <button class="filter-btn" data-range="thismonth" data-lang-key="dateFilterThisMonth">This Month</button>
+                        <button class="filter-btn" data-range="lastmonth" data-lang-key="dateFilterLastMonth">Last Month</button>
+                        <button class="filter-btn" data-range="custom" data-lang-key="dateFilterCustom">Custom</button>
+                    </div>
+                </div>
+
+                <div class="cards-row">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon bg-primary">
+                                <i class="fas fa-chart-area"></i>
+                            </div>
+                            <div class="card-info">
+                                <h3>150,000</h3>
+                                <p data-lang-key="analyticsPageViews">Page Views</p>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="trend"><i class="fas fa-arrow-up"></i> 15% <span data-lang-key="increase">increase</span></span>
+                            <button class="btn-details" data-modal-target="pageViewsModal" data-lang-key="detailsBtn" aria-label="Details for Page Views">Details</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon bg-success">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="card-info">
+                                <h3>85,000</h3>
+                                <p data-lang-key="analyticsUniqueVisitors">Unique Visitors</p>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="trend"><i class="fas fa-arrow-up"></i> 10% <span data-lang-key="increase">increase</span></span>
+                            <button class="btn-details" data-modal-target="uniqueVisitorsModal" data-lang-key="detailsBtn" aria-label="Details for Unique Visitors">Details</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon bg-warning">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="card-info">
+                                <h3>00:03:45</h3>
+                                <p data-lang-key="analyticsAvgSessionDuration">Avg. Session Duration</p>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="trend decrease"><i class="fas fa-arrow-down"></i> 2% <span data-lang-key="decrease">decrease</span></span>
+                            <button class="btn-details" data-modal-target="sessionDurationModal" data-lang-key="detailsBtn" aria-label="Details for Average Session Duration">Details</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon bg-danger">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div class="card-info">
+                                <h3>45.8%</h3>
+                                <p data-lang-key="analyticsBounceRate">Bounce Rate</p>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="trend"><i class="fas fa-arrow-up"></i> 1.5% <span data-lang-key="increase">increase</span></span>
+                            <button class="btn-details" data-modal-target="bounceRateModal" data-lang-key="detailsBtn" aria-label="Details for Bounce Rate">Details</button>
+                        </div>
+                    </div>
+                     <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon bg-secondary">
+                                <i class="fas fa-redo-alt"></i>
+                            </div>
+                            <div class="card-info">
+                                <h3>65%</h3>
+                                <p data-lang-key="analyticsReturningVisitors">Returning Visitors</p>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="trend"><i class="fas fa-arrow-up"></i> 5% <span data-lang-key="increase">increase</span></span>
+                            <button class="btn-details" data-modal-target="returningVisitorsModal" data-lang-key="detailsBtn" aria-label="Details for Returning Visitors">Details</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon bg-info">
+                                <i class="fas fa-funnel-dollar"></i>
+                            </div>
+                            <div class="card-info">
+                                <h3>72%</h3>
+                                <p data-lang-key="analyticsConversionFunnel">Conversion Funnel</p>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="trend"><i class="fas fa-arrow-up"></i> 3% <span data-lang-key="increase">increase</span></span>
+                            <button class="btn-details" data-modal-target="conversionFunnelModal" data-lang-key="detailsBtn" aria-label="Details for Conversion Funnel">Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="charts-row">
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h3 data-lang-key="analyticsVisitorTrends">Visitor Trends</h3>
+                            <div class="chart-actions">
+                                <button id="downloadVisitorTrendsChart" title="Download Chart" aria-label="Download Visitor Trends Chart"><i class="fas fa-download"></i></button>
+                                <button id="optionsVisitorTrendsChart" title="Chart Options" class="chart-options-toggle" data-chart-id="visitorTrendsChart" aria-label="Visitor Trends Chart Options"><i class="fas fa-ellipsis-v"></i></button>
+                                <div class="chart-options-dropdown" id="visitorTrendsChartDropdown">
+                                    <a href="#" data-action="view-data" data-lang-key="chartViewData">View Data</a>
+                                    <a href="#" data-action="export-csv" data-lang-key="chartExportCSV">Export to CSV</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart">
+                            <canvas id="visitorTrendsChart"></canvas>
+                        </div>
+                        <div class="chart-info-text">
+                            <p><strong data-lang-key="analyticsVisitorTrendsWeeklyTrend">Weekly trend:</strong> <span data-lang-key="analyticsVisitorTrendsWeeklyTrendText">Shows fluctuations in visitor numbers, peaking in Week 8.</span></p>
+                            <p><strong data-lang-key="analyticsVisitorTrendsAnalysis">Analysis:</strong> <span data-lang-key="analyticsVisitorTrendsAnalysisText">Further investigation into marketing activities on week 4 and 8 could reveal growth drivers.</span></p>
+                        </div>
+                    </div>
+
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h3 data-lang-key="analyticsTrafficSources">Traffic Sources</h3>
+                            <div class="chart-actions">
+                                <button id="downloadTrafficSourcesChart" title="Download Chart" aria-label="Download Traffic Sources Chart"><i class="fas fa-download"></i></button>
+                                <button id="optionsTrafficSourcesChart" title="Chart Options" class="chart-options-toggle" data-chart-id="trafficSourcesChart" aria-label="Traffic Sources Chart Options"><i class="fas fa-ellipsis-v"></i></button>
+                                <div class="chart-options-dropdown" id="trafficSourcesChartDropdown">
+                                    <a href="#" data-action="view-data" data-lang-key="chartViewData">View Data</a>
+                                    <a href="#" data-action="export-csv" data-lang-key="chartExportCSV">Export to CSV</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart">
+                            <canvas id="trafficSourcesChart"></canvas>
+                        </div>
+                        <div class="chart-info-text">
+                            <p><strong data-lang-key="analyticsTrafficSourcesPrimary">Primary sources:</strong> <span data-lang-key="analyticsTrafficSourcesPrimaryText">Organic Search (35%) and Direct (25%) are the main drivers.</span></p>
+                            <p><strong data-lang-key="analyticsTrafficSourcesOpportunities">Opportunities:</strong> <span data-lang-key="analyticsTrafficSourcesOpportunitiesText">Social Media (18%) and Referral (12%) show potential for increased efforts.</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer">
+                <p data-lang-key="footerText">&copy; 2023 DashPro. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="pageViewsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 data-lang-key="modalPageViewsTitle">Page Views Details</h2>
+            <div class="modal-body-content">
+                <p><strong data-lang-key="modalTotal">Total:</strong> 150,000 <span data-lang-key="modalViews">views</span></p>
+                <p><strong data-lang-key="modalTrend">Trend (Last 30 Days):</strong> <span class="trend-value increase">+15%</span></p>
+                <div class="chart-modal-container">
+                    <canvas id="pageViewsModalChart"></canvas>
+                </div>
+                <div class="chart-info-text">
+                    <p><strong data-lang-key="modalBreakdown">Breakdown:</strong> <span data-lang-key="modalBreakdownText">Homepage (20%), Products (15%), Blog (10%) are top viewed pages.</span></p>
+                    <p><strong data-lang-key="modalEngagement">Engagement:</strong> <span data-lang-key="modalEngagementText">Average of 3.5 pages viewed per visitor.</span></p>
+                </div>
+                <p><strong data-lang-key="modalTopPages">Top Pages:</strong> /homepage (20%), /products (15%), /blog (10%)</p>
+                <p><strong data-lang-key="modalAvgPerVisitor">Avg. per visitor:</strong> 3.5 <span data-lang-key="modalPages">pages</span></p>
+                <p class="modal-info-text" data-lang-key="modalPageViewsInfo">Detailed page view analysis, including heatmaps and user flow, is available in the full analytics report.</p>
+            </div>
+            <div class="modal-actions">
+                <button class="btn-primary close-modal-btn" data-lang-key="modalClose">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="uniqueVisitorsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 data-lang-key="modalUniqueVisitorsTitle">Unique Visitors Details</h2>
+            <div class="modal-body-content">
+                <p><strong data-lang-key="modalTotal">Total:</strong> 85,000 <span data-lang-key="modalUniqueUsers">unique users</span></p>
+                <p><strong data-lang-key="modalTrend">Trend (Last 30 Days):</strong> <span class="trend-value increase">+10%</span></p>
+                <div class="chart-modal-container">
+                    <canvas id="uniqueVisitorsModalChart"></canvas>
+                </div>
+                <p><strong data-lang-key="modalNewVsReturning">New vs Returning:</strong> 35% <span data-lang-key="modalNew">new</span>, 65% <span data-lang-key="modalReturning">returning</span></p>
+                <p><strong data-lang-key="modalPeakHours">Peak Hours:</strong> 10 AM - 2 PM</p>
+                <p class="modal-info-text" data-lang-key="modalUniqueVisitorsInfo">Understand your audience better with demographic and geographic insights found in comprehensive user analytics.</p>
+            </div>
+            <div class="modal-actions">
+                <button class="btn-primary close-modal-btn" data-lang-key="modalClose">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="sessionDurationModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 data-lang-key="modalSessionDurationTitle">Avg. Session Duration Details</h2>
+            <div class="modal-body-content">
+                <p><strong data-lang-key="modalAverage">Average:</strong> 00:03:45</p>
+                <p><strong data-lang-key="modalTrend">Trend (Last 30 Days):</strong> <span class="trend-value decrease">-2%</span></p>
+                <div class="chart-modal-container">
+                    <canvas id="sessionDurationModalChart"></canvas>
+                </div>
+                <p><strong data-lang-key="modalGoal">Goal:</strong> 00:04:00</p>
+                <p><strong data-lang-key="modalLongestSessions">Longest Sessions:</strong> <span data-lang-key="modalProductConfig">Product configuration</span>, <span data-lang-key="modalBlogReading">Blog reading</span></p>
+                <p class="modal-info-text" data-lang-key="modalSessionDurationInfo">Improve user engagement and content strategy by analyzing session duration across different content types.</p>
+            </div>
+            <div class="modal-actions">
+                <button class="btn-primary close-modal-btn" data-lang-key="modalClose">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="bounceRateModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 data-lang-key="modalBounceRateTitle">Bounce Rate Details</h2>
+            <div class="modal-body-content">
+                <p><strong data-lang-key="modalCurrent">Current:</strong> 45.8%</p>
+                <p><strong data-lang-key="modalTrend">Trend (Last 30 Days):</strong> <span class="trend-value increase">+1.5%</span></p>
+                <div class="chart-modal-container">
+                    <canvas id="bounceRateModalChart"></canvas>
+                </div>
+                <p><strong data-lang-key="modalIndustryAvg">Industry Avg:</strong> 40-50%</p>
+                <p><strong data-lang-key="modalHighBouncePages">High Bounce Pages:</strong> Landing Page A (60%), Blog Post X (55%)</p>
+                <p class="modal-info-text" data-lang-key="modalBounceRateInfo">Identify pages with high bounce rates to optimize content, user experience, and call-to-actions.</p>
+            </div>
+            <div class="modal-actions">
+                <button class="btn-primary close-modal-btn" data-lang-key="modalClose">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="returningVisitorsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 data-lang-key="modalReturningVisitorsTitle">Returning Visitors Details</h2>
+            <div class="modal-body-content">
+                <p><strong data-lang-key="modalPercentage">Percentage:</strong> 65%</p>
+                <p><strong data-lang-key="modalTrend">Trend (Last 30 Days):</strong> <span class="trend-value increase">+5%</span></p>
+                <div class="chart-modal-container">
+                    <canvas id="returningVisitorsModalChart"></canvas>
+                </div>
+                <p><strong data-lang-key="modalLoyaltyScore">Loyalty Score:</strong> <span data-lang-key="modalHigh">High</span></p>
+                <p><strong data-lang-key="modalRetentionRate">Retention Rate (30 days):</strong> 40%</p>
+                <p class="modal-info-text" data-lang-key="modalReturningVisitorsInfo">Focus on strategies to convert new visitors into loyal returning customers for long-term growth.</p>
+            </div>
+            <div class="modal-actions">
+                <button class="btn-primary close-modal-btn" data-lang-key="modalClose">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="conversionFunnelModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 data-lang-key="modalConversionFunnelTitle">Conversion Funnel Details</h2>
+            <div class="modal-body-content">
+                <p><strong data-lang-key="modalOverallConversion">Overall Conversion:</strong> 72%</p>
+                <p><strong data-lang-key="modalTrend">Trend (Last 30 Days):</strong> <span class="trend-value increase">+3%</span></p>
+                <div class="chart-modal-container">
+                    <canvas id="conversionFunnelModalChart"></canvas>
+                </div>
+                <p><strong data-lang-key="modalStage1">Stage 1 (Add to Cart):</strong> 90%</p>
+                <p><strong data-lang-key="modalStage2">Stage 2 (Checkout Initiated):</strong> 80%</p>
+                <p><strong data-lang-key="modalStage3">Stage 3 (Purchase Completed):</strong> 72%</p>
+                <p class="modal-info-text" data-lang-key="modalConversionFunnelInfo">Analyze each step of the conversion funnel to identify drop-off points and optimize your sales process.</p>
+            </div>
+            <div class="modal-actions">
+                <button class="btn-primary close-modal-btn" data-lang-key="modalClose">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="notificationsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 data-lang-key="modalAllNotificationsTitle">All Notifications</h2>
+            <div class="modal-body-content">
+                <div class="notification-full-list">
+                    <div class="notification-item-full">
+                        <span class="notification-icon new"><i class="fas fa-plus"></i></span>
+                        <div class="notification-content">
+                            <p data-lang-key="notificationNewOrderFull">New order received! Order ID: #ORD-001 from John Doe for $128.50.</p>
+                            <small>5 mins ago</small>
+                            <button class="btn-modern-sm mark-read-btn" data-lang-key="notificationMarkRead">Mark as Read</button>
+                        </div>
+                    </div>
+                    <div class="notification-item-full">
+                        <span class="notification-icon alert"><i class="fas fa-exclamation-triangle"></i></span>
+                        <div class="notification-content">
+                            <p data-lang-key="notificationLowStockFull">Critical low stock alert for "Laptop Pro X15". Only 5 units left.</p>
+                            <small>1 hour ago</small>
+                            <button class="btn-modern-sm mark-read-btn" data-lang-key="notificationMarkRead">Mark as Read</button>
+                        </div>
+                    </div>
+                    <div class="notification-item-full read">
+                        <span class="notification-icon"><i class="fas fa-check"></i></span>
+                        <div class="notification-content">
+                            <p data-lang-key="notificationUpdateAvailableFull">System update version 2.1.0 is available. Please update for new features.</p>
+                            <small>Yesterday</small>
+                            <button class="btn-modern-sm mark-unread-btn" data-lang-key="notificationMarkUnread">Mark as Unread</button>
+                        </div>
+                    </div>
+                    <div class="notification-item-full read">
+                        <span class="notification-icon"><i class="fas fa-info-circle"></i></span>
+                        <div class="notification-content">
+                            <p data-lang-key="notificationNewUserRegistered">A new user has registered: Sarah Johnson.</p>
+                            <small>2 days ago</small>
+                            <button class="btn-modern-sm mark-unread-btn" data-lang-key="notificationMarkUnread">Mark as Unread</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button class="btn-modern" data-lang-key="modalClearAll">Clear All</button>
+                <button class="btn-secondary close-modal-btn" data-lang-key="modalClose">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="messagesModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 data-lang-key="modalAllMessagesTitle">All Messages</h2>
+            <div class="modal-body-content">
+                <div class="message-full-list">
+                    <div class="message-item-full">
+                        <img src="assets/images/profile.jpg" alt="User" class="message-avatar">
+                        <div class="message-content">
+                            <p class="message-sender">Jane Doe</p>
+                            <p class="message-subject" data-lang-key="messageNewFeatureSubject">Subject: Inquiry about new feature rollout</p>
+                            <p class="message-preview" data-lang-key="messageNewFeatureDetail">"Hi team, I was wondering if there's any update on the new feature rollout described in the last meeting notes..."</p>
+                            <small>20 mins ago</small>
+                            <button class="btn-modern-sm view-message-btn" data-lang-key="messageViewDetails">View Details</button>
+                        </div>
+                    </div>
+                    <div class="message-item-full read">
+                        <img src="assets/images/profile.jpg" alt="User" class="message-avatar">
+                        <div class="message-content">
+                            <p class="message-sender">Alex Smith</p>
+                            <p class="message-subject" data-lang-key="messageFeedbackSubject">Subject: Feedback on monthly report</p>
+                            <p class="message-preview" data-lang-key="messageFeedbackDetail">"The monthly report was very insightful. Just had a small question about the Q3 projections..."</p>
+                            <small>1 hour ago</small>
+                            <button class="btn-modern-sm view-message-btn" data-lang-key="messageViewDetails">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button class="btn-modern" data-lang-key="modalComposeMessage">Compose Message</button>
+                <button class="btn-secondary close-modal-btn" data-lang-key="modalClose">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="myProfileModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 data-lang-key="modalMyProfileTitle">My Profile Details</h2>
+            <div class="modal-body-content">
+                <p><strong data-lang-key="modalName">Name:</strong> John Doe</p>
+                <p><strong data-lang-key="modalEmail">Email:</strong> john.doe@example.com</p>
+                <p><strong data-lang-key="modalRole">Role:</strong> Administrator</p>
+                <p class="modal-info-text" data-lang-key="modalMyProfileInfo">View and manage your personal profile information.</p>
+            </div>
+            <div class="modal-actions">
+                <button class="btn-primary close-modal-btn" data-lang-key="modalEditProfile">Edit Profile</button>
+                <button class="btn-secondary close-modal-btn" data-lang-key="modalClose">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="switchAccountModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 data-lang-key="modalSwitchAccountTitle">Switch Account</h2>
+            <div class="modal-body-content">
+                <p data-lang-key="modalSwitchAccountInfo">Select another account to switch to. You might need to re-authenticate.</p>
+                <div class="form-group">
+                    <label for="accountSelect" data-lang-key="modalSelectAccount">Select Account</label>
+                    <select id="accountSelect">
+                        <option value="account1">Account 1 (Main)</option>
+                        <option value="account2">Account 2 (Staging)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button class="btn-primary" data-lang-key="modalSwitch">Switch</button>
+                <button class="btn-secondary close-modal-btn" data-lang-key="modalCancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="loginRegisterModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 data-lang-key="modalLoginRegisterTitle">Login / Register</h2>
+            <div class="modal-body-content">
+                <p data-lang-key="modalLoginRegisterInfo">You are currently logged in. This modal simulates redirecting to login/registration forms.</p>
+            </div>
+            <div class="modal-actions">
+                <button class="btn-primary" data-lang-key="modalGoToLogin">Go to Login</button>
+                <button class="btn-secondary close-modal-btn" data-lang-key="modalClose">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="logoutModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 data-lang-key="modalLogoutTitle">Confirm Logout</h2>
+            <div class="modal-body-content">
+                <p data-lang-key="modalLogoutConfirm">Are you sure you want to log out of DashPro?</p>
+            </div>
+            <div class="modal-actions">
+                <button class="btn-danger" data-lang-key="profileLogout">Log Out</button>
+                <button class="btn-secondary close-modal-btn" data-lang-key="modalCancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="toastNotification" class="toast-notification">
+        <i class="fas fa-check-circle"></i> <span></span>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    
+    <script src="assets/js/main.js"></script>
+    
+    <script src="assets/js/analytics.js"></script>
+</body>
+</html>

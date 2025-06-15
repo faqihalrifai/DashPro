@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang-key="helpTitle">DashPro - Help & Support</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/core.css">
+</head>
+<body class="help-page">
+    <div class="app-container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <i class="fas fa-rocket fa-2x"></i>
+                <h2>DashPro</h2>
+                <button class="close-sidebar" aria-label="Close Sidebar">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="sidebar-menu">
+                <p class="menu-title" data-lang-key="menuMain">Main</p>
+                <div class="menu-item">
+                    <a href="index.html" class="menu-link">
+                        <i class="fas fa-home"></i>
+                        <span data-lang-key="menuDashboard">Dashboard</span>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a href="analytics.html" class="menu-link">
+                        <i class="fas fa-chart-line"></i>
+                        <span data-lang-key="menuAnalytics">Analytics</span>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a href="orders.html" class="menu-link">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span data-lang-key="menuOrders">Orders</span>
+                        <span class="badge">15</span>
+                    </a>
+                </div>
+
+                <p class="menu-title" data-lang-key="menuManagement">Management</p>
+                <div class="menu-item">
+                    <a href="users.html" class="menu-link">
+                        <i class="fas fa-users"></i>
+                        <span data-lang-key="menuUsers">Users</span>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a href="products.html" class="menu-link">
+                        <i class="fas fa-box"></i>
+                        <span data-lang-key="menuProducts">Products</span>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a href="categories.html" class="menu-link">
+                        <i class="fas fa-list"></i>
+                        <span data-lang-key="menuCategories">Categories</span>
+                    </a>
+                </div>
+
+                <p class="menu-title" data-lang-key="menuSettings">Settings</p>
+                <div class="menu-item">
+                    <a href="settings.html" class="menu-link">
+                        <i class="fas fa-cog"></i>
+                        <span data-lang-key="menuSettings">Settings</span>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a href="help.html" class="menu-link active">
+                        <i class="fas fa-question-circle"></i>
+                        <span data-lang-key="menuHelp">Help</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="header">
+                <button class="toggle-sidebar">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <div class="header-right">
+                    <div class="header-icon dropdown-toggle" id="notificationsToggle">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">5</span> <div class="dropdown-menu notifications-menu" id="notificationsMenu">
+                            <h4 data-lang-key="headerNotificationsTitle">Notifications</h4>
+                            <div class="notification-item">
+                                <span class="notification-icon new"><i class="fas fa-plus"></i></span>
+                                <div class="notification-content">
+                                    <p data-lang-key="notificationNewOrder">New order received! <strong data-lang-key="notificationOrderId">#ORD-001</strong></p>
+                                    <small>5 mins ago</small>
+                                </div>
+                            </div>
+                            <div class="notification-item">
+                                <span class="notification-icon alert"><i class="fas fa-exclamation-triangle"></i></span>
+                                <div class="notification-content">
+                                    <p data-lang-key="notificationLowStock">Product <strong data-lang-key="notificationProductA">"Product A"</strong> is low in stock.</p>
+                                    <small>1 hour ago</small>
+                                </div>
+                            </div>
+                            <div class="notification-item read">
+                                <span class="notification-icon"><i class="fas fa-check"></i></span>
+                                <div class="notification-content">
+                                    <p data-lang-key="notificationUpdateAvailable">System update available.</p>
+                                    <small>Yesterday</small>
+                                </div>
+                            </div>
+                            <a href="#" class="dropdown-footer" data-action="view-all-notifications" data-modal-target="notificationsModal" data-lang-key="headerViewAllNotifications">View All Notifications</a>
+                        </div>
+                    </div>
+
+                    <div class="header-icon dropdown-toggle" id="messagesToggle">
+                        <i class="fas fa-envelope"></i>
+                        <span class="message-badge">2</span> <div class="dropdown-menu messages-menu" id="messagesMenu">
+                            <h4 data-lang-key="headerMessagesTitle">Messages</h4>
+                            <div class="message-item">
+                                <img src="assets/images/profile.jpg" alt="User" class="message-avatar">
+                                <div class="message-content">
+                                    <p class="message-sender">Jane Doe</p>
+                                    <p class="message-preview" data-lang-key="messageNewFeatureInquiry">Inquiry about new feature...</p>
+                                    <small>20 mins ago</small>
+                                </div>
+                            </div>
+                            <div class="message-item">
+                                <img src="assets/images/profile.jpg" alt="User" class="message-avatar">
+                                <div class="message-content">
+                                    <p class="message-sender">Alex Smith</p>
+                                    <p class="message-preview" data-lang-key="messageFeedbackOnReport">Feedback on monthly report...</p>
+                                    <small>1 hour ago</small>
+                                </div>
+                            </div>
+                            <a href="#" class="dropdown-footer" data-action="view-all-messages" data-modal-target="messagesModal" data-lang-key="headerViewAllMessages">View All Messages</a>
+                        </div>
+                    </div>
+
+                    <div class="header-icon dropdown-toggle" id="languageToggle">
+                        <i class="fas fa-globe"></i>
+                        <div class="dropdown-menu language-menu" id="languageMenu">
+                            <a href="#" class="dropdown-item language-select active" data-lang="id">
+                                <span class="flag-icon id"></span> <span data-lang-key="languageIndonesian">Bahasa Indonesia</span>
+                            </a>
+                            <a href="#" class="dropdown-item language-select" data-lang="en">
+                                <span class="flag-icon en"></span> <span data-lang-key="languageEnglish">English</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="header-icon dropdown-toggle" id="themeToggle">
+                        <i class="fas fa-palette"></i>
+                        <div class="dropdown-menu theme-menu" id="themeMenu">
+                            <h4 data-lang-key="menuSettings">Theme Settings</h4>
+                            
+                            <div class="theme-option">
+                                <span data-lang-key="settingsThemePrimaryColor">Primary Color</span>
+                                <div class="color-picker-group">
+                                    <button class="color-dot active" data-color="#5a67d8" style="background-color: #5a67d8;"></button>
+                                    <button class="color-dot" data-color="#007bff" style="background-color: #007bff;"></button>
+                                    <button class="color-dot" data-color="#28a745" style="background-color: #28a745;"></button>
+                                    <button class="color-dot" data-color="#dc3545" style="background-color: #dc3545;"></button>
+                                    <input type="color" id="customPrimaryColorInput" value="#5a67d8" class="color-dot" title="Choose a custom color">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="user-profile profile-toggle" id="profileToggle">
+                        <img src="assets/images/profile.jpg" alt="User">
+                        <div class="user-info">
+                            <h4>John Doe</h4>
+                            <span>Administrator</span>
+                        </div>
+                        <div class="dropdown-menu profile-menu" id="profileMenu">
+                            <div class="profile-summary">
+                                <img src="assets/images/profile.jpg" alt="User">
+                                <div class="info">
+                                    <h5>John Doe</h5>
+                                    <small>john.doe@example.com</small>
+                                </div>
+                            </div>
+                            <a href="#" class="dropdown-item" data-action="my-profile" data-modal-target="myProfileModal"><i class="fas fa-user"></i> <span data-lang-key="profileMyProfile">My Profile</span></a>
+                            <a href="settings.html" class="dropdown-item"><i class="fas fa-cog"></i> <span data-lang-key="profileAccountSettings">Account Settings</span></a>
+                            <a href="#" class="dropdown-item" data-action="switch-account" data-modal-target="switchAccountModal"><i class="fas fa-users"></i> <span data-lang-key="profileSwitchAccount">Switch Account</span></a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" class="dropdown-item" data-action="login-register" data-modal-target="loginRegisterModal"><i class="fas fa-sign-in-alt"></i> <span data-lang-key="profileLoginRegister">Login / Register</span></a>
+                            <a href="#" class="dropdown-item logout-btn" data-action="logout" data-modal-target="logoutModal"><i class="fas fa-sign-out-alt"></i> <span data-lang-key="profileLogout">Log Out</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="page-header">
+                    <h1 data-lang-key="helpTitle">Help & Support</h1>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item" data-lang-key="breadcrumbHome">Home</li>
+                        <li class="breadcrumb-item active" data-lang-key="menuHelp">Help</li>
+                    </ul>
+                </div>
+
+                <div class="cards-row">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon bg-primary">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="card-info">
+                                <h3 data-lang-key="cardDocumentationTitle">Documentation</h3>
+                                <p data-lang-key="cardDocumentationText">Access detailed guides</p>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn-details" data-modal-target="docModal" data-lang-key="detailsBtn" aria-label="Details for Documentation">Details</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon bg-success">
+                                <i class="fas fa-ticket-alt"></i>
+                            </div>
+                            <div class="card-info">
+                                <h3 data-lang-key="cardTicketTitle">Submit a Ticket</h3>
+                                <p data-lang-key="cardTicketText">Get personalized support</p>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn-details" data-modal-target="ticketModal" data-lang-key="detailsBtn" aria-label="Details for Submit a Ticket">Details</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon bg-warning">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <div class="card-info">
+                                <h3 data-lang-key="cardForumTitle">Community Forum</h3>
+                                <p data-lang-key="cardForumText">Ask questions, share insights</p>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn-details" data-modal-target="forumModal" data-lang-key="detailsBtn" aria-label="Details for Community Forum">Details</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon bg-danger">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <div class="card-info">
+                                <h3 data-lang-key="cardTutorialsTitle">Video Tutorials</h3>
+                                <p data-lang-key="cardTutorialsText">Learn with visual guides</p>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn-details" data-modal-target="tutorialsModal" data-lang-key="detailsBtn" aria-label="Details for Video Tutorials">Details</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon bg-info">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <div class="card-info">
+                                <h3 data-lang-key="cardContactTitle">Contact Support</h3>
+                                <p data-lang-key="cardContactText">Direct contact options</p>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn-details" data-modal-target="contactModal" data-lang-key="detailsBtn" aria-label="Details for Contact Support">Details</button>
+                        </div>
+                    </div>
+
+                    <div class="card"> <div class="card-header">
+                            <div class="card-icon bg-secondary">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <div class="card-info">
+                                <h3 data-lang-key="cardSystemStatusTitle">System Status</h3>
+                                <p data-lang-key="cardSystemStatusText">Check service uptime</p>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn-details" data-modal-target="systemStatusModal" data-lang-key="detailsBtn" aria-label="Details for System Status">Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" style="margin-top: 25px;">
+                    <div class="card-header">
+                        <h3 data-lang-key="faqTitle">Frequently Asked Questions</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="faq-accordion">
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <h4 data-lang-key="faqQ1">How do I reset my password? <i class="fas fa-chevron-down"></i></h4>
+                                </div>
+                                <div class="faq-answer">
+                                    <p data-lang-key="faqA1">You can reset your password from the login page by clicking on "Forgot Password" or in your user profile settings if you are logged in. For security reasons, please follow the instructions sent to your registered email address.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <h4 data-lang-key="faqQ2">Where can I find my order history? <i class="fas fa-chevron-down"></i></h4>
+                                </div>
+                                <div class="faq-answer">
+                                    <p data-lang-key="faqA2">Your complete order history is available under the "Orders" section in the sidebar menu. You can filter by date, status, or search for specific order IDs.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <h4 data-lang-key="faqQ3">Is this dashboard mobile-friendly? <i class="fas fa-chevron-down"></i></h4>
+                                </div>
+                                <div class="faq-answer">
+                                    <p data-lang-key="faqA3">Yes, DashPro is designed to be fully responsive and works seamlessly on various screen sizes, including mobile phones and tablets. The layout adapts automatically for optimal viewing.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <h4 data-lang-key="faqQ4">How to add a new product? <i class="fas fa-chevron-down"></i></h4>
+                                </div>
+                                <div class="faq-answer">
+                                    <p data-lang-key="faqA4">Navigate to the "Products" page from the sidebar. Click on the "Add Product" button usually located at the top right of the product list. Fill in the required details such as name, category, price, stock, and upload relevant images. Click 'Save' to add the product.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <h4 data-lang-key="faqQ5">Can I customize the dashboard colors? <i class="fas fa-chevron-down"></i></h4>
+                                </div>
+                                <div class="faq-answer">
+                                    <p data-lang-key="faqA5">Primary color customization can be done via the theme settings icon in the header. For advanced customization, direct modification of CSS variables in the `style.css` file is recommended.</p>
+                                </div>
+                            </div>
+                             <div class="faq-item">
+                                <div class="faq-question">
+                                    <h4 data-lang-key="faqQ6">How do I integrate with third-party services? <i class="fas fa-chevron-down"></i></h4>
+                                </div>
+                                <div class="faq-answer">
+                                    <p data-lang-key="faqA6">Integrations with services like Google Analytics or Mailchimp can be managed from the 'Settings' page under the 'Integrations' tab. You will typically need to provide API keys or tracking IDs from the respective service.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer">
+                <p data-lang-key="footerText">&copy; 2023 DashPro. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="docModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 data-lang-key="modalDocTitle">Documentation Details</h2>
+            <p data-lang-key="modalDocText1">Access our comprehensive documentation portal for step-by-step guides, feature explanations, and troubleshooting tips.</p>
+            <p><strong data-lang-key="modalDocText2">Topics include:</strong> <span data-lang-key="modalGettingStarted">Getting Started</span>, <span data-lang-key="modalUserGuide">User Guide</span>, <span data-lang-key="modalAPIReference">API Reference</span>, <span data-lang-key="modalTroubleshooting">Troubleshooting</span>.</p>
+            <div class="modal-actions">
+                <a href="#" class="btn-primary" target="_blank" data-lang-key="modalGoToDocs">Go to Docs</a>
+                <button class="btn-secondary close-modal-btn" data-lang-key="modalClose">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="ticketModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 data-lang-key="modalTicketTitle">Submit a Ticket Details</h2>
+            <p data-lang-key="modalTicketText1">For personalized support, submit a new support ticket. Our team aims to respond within 24-48 hours.</p>
+            <p><strong data-lang-key="modalTicketText2">Please include:</strong> <span data-lang-key="modalIssueDescription">Issue description</span>, <span data-lang-key="modalScreenshots">screenshots</span>, <span data-lang-key="modalRelevantIDs">relevant IDs</span> (<span data-lang-key="modalOrder">order</span>, <span data-lang-key="modalUser">user</span>, <span data-lang-key="modalProduct">product</span>).</p>
+            <div class="modal-actions">
+                <a href="#" class="btn-primary" data-lang-key="modalCreateNewTicket">Submit New Ticket</a>
+                <button class="btn-secondary close-modal-btn" data-lang-key="modalClose">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="forumModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 data-lang-key="modalForumTitle">Community Forum Details</h2>
+            <p data-lang-key="modalForumText1">Join our active community forum to ask questions, share knowledge, and connect with other users. Many common issues are resolved here.</p>
+            <p><strong data-lang-key="modalForumText2">Features:</strong> <span data-lang-key="modalSearchOldPosts">Search old posts</span>, <span data-lang-key="modalStartNewDiscussions">Start new discussions</span>, <span data-lang-key="modalGetPeerSupport">Get peer support</span>.</p>
+            <div class="modal-actions">
+                <a href="#" class="btn-primary" target="_blank" data-lang-key="modalVisitForum">Visit Forum</a>
+                <button class="btn-secondary close-modal-btn" data-lang-key="modalClose">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="tutorialsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 data-lang-key="modalTutorialsTitle">Video Tutorials Details</h2>
+            <p data-lang-key="modalTutorialsText1">Watch our video tutorials for visual, step-by-step instructions on how to use various features of DashPro.</p>
+            <p><strong data-lang-key="modalTutorialsText2">Available series:</strong> <span data-lang-key="modalDashboardWalkthrough">Dashboard Walkthrough</span>, <span data-lang-key="modalProductManagement">Product Management</span>, <span data-lang-key="modalAnalyticsDeepDive">Analytics Deep Dive</span>.</p>
+            <div class="modal-actions">
+                <a href="#" class="btn-primary" target="_blank" data-lang-key="modalWatchTutorials">Watch Videos</a>
+                <button class="btn-secondary close-modal-btn" data-lang-key="modalClose">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 data-lang-key="modalContactTitle">Contact Support Details</h2>
+            <p data-lang-key="modalContactText1">If you need direct assistance, you can reach our support team via phone or email during business hours.</p>
+            <p><strong data-lang-key="modalPhone">Phone:</strong> +123 456 7890 (<span data-lang-key="modalMonFri">Mon-Fri</span>, 9 AM - 5 PM WIB)</p>
+            <p><strong data-lang-key="modalEmail">Email:</strong> support@dashpro.com</p> <div class="modal-actions">
+                <a href="mailto:support@dashpro.com" class="btn-primary" data-lang-key="modalSendEmail">Send Email</a>
+                <button class="btn-secondary close-modal-btn" data-lang-key="modalClose">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="systemStatusModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 data-lang-key="modalSystemStatusTitle">System Status Details</h2>
+            <p data-lang-key="modalSystemStatusText1">Check the current operational status of all DashPro services. We aim for 99.9% uptime.</p>
+            <p><strong data-lang-key="modalCurrentStatus">Current Status:</strong> <span data-lang-key="modalAllSystemsOperational">All Systems Operational</span> <span style="color: var(--success);"><i class="fas fa-check-circle"></i></span></p>
+            <p><strong data-lang-key="modalLastIncident">Last Incident:</strong> <span data-lang-key="modalNone">None</span> (<span data-lang-key="modalLastUpdated">Last updated:</span> 2025-06-08)</p>
+            <div class="modal-actions">
+                <a href="#" class="btn-primary" target="_blank" data-lang-key="modalViewStatusPage">View Status Page</a>
+                <button class="btn-secondary close-modal-btn" data-lang-key="modalClose">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="notificationsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 data-lang-key="modalAllNotificationsTitle">All Notifications</h2>
+            <div class="modal-body-content">
+                <div class="notification-full-list">
+                    <div class="notification-item-full">
+                        <span class="notification-icon new"><i class="fas fa-plus"></i></span>
+                        <div class="notification-content">
+                            <p data-lang-key="notificationNewOrderFull">New order received! Order ID: #ORD-001 from John Doe for $128.50.</p>
+                            <small>5 mins ago</small>
+                            <button class="btn-modern-sm mark-read-btn" data-lang-key="notificationMarkRead">Mark as Read</button>
+                        </div>
+                    </div>
+                    <div class="notification-item-full">
+                        <span class="notification-icon alert"><i class="fas fa-exclamation-triangle"></i></span>
+                        <div class="notification-content">
+                            <p data-lang-key="notificationLowStockFull">Critical low stock alert for "Laptop Pro X15". Only 5 units left.</p>
+                            <small>1 hour ago</small>
+                            <button class="btn-modern-sm mark-read-btn" data-lang-key="notificationMarkRead">Mark as Read</button>
+                        </div>
+                    </div>
+                    <div class="notification-item-full read">
+                        <span class="notification-icon"><i class="fas fa-check"></i></span>
+                        <div class="notification-content">
+                            <p data-lang-key="notificationUpdateAvailableFull">System update version 2.1.0 is available. Please update for new features.</p>
+                            <small>Yesterday</small>
+                            <button class="btn-modern-sm mark-unread-btn" data-lang-key="notificationMarkUnread">Mark as Unread</button>
+                        </div>
+                    </div>
+                    <div class="notification-item-full read">
+                        <span class="notification-icon"><i class="fas fa-info-circle"></i></span>
+                        <div class="notification-content">
+                            <p data-lang-key="notificationNewUserRegistered">A new user has registered: Sarah Johnson.</p>
+                            <small>2 days ago</small>
+                            <button class="btn-modern-sm mark-unread-btn" data-lang-key="notificationMarkUnread">Mark as Unread</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button class="btn-modern" data-lang-key="modalClearAll">Clear All</button>
+                <button class="btn-secondary close-modal-btn" data-lang-key="modalClose">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="messagesModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 data-lang-key="modalAllMessagesTitle">All Messages</h2>
+            <div class="modal-body-content">
+                <div class="message-full-list">
+                    <div class="message-item-full">
+                        <img src="assets/images/profile.jpg" alt="User" class="message-avatar">
+                        <div class="message-content">
+                            <p class="message-sender">Jane Doe</p>
+                            <p class="message-subject" data-lang-key="messageNewFeatureSubject">Subject: Inquiry about new feature rollout</p>
+                            <p class="message-preview" data-lang-key="messageNewFeatureDetail">"Hi team, I was wondering if there's any update on the new feature rollout described in the last meeting notes..."</p>
+                            <small>20 mins ago</small>
+                            <button class="btn-modern-sm view-message-btn" data-lang-key="messageViewDetails">View Details</button>
+                        </div>
+                    </div>
+                    <div class="message-item-full read">
+                        <img src="assets/images/profile.jpg" alt="User" class="message-avatar">
+                        <div class="message-content">
+                            <p class="message-sender">Alex Smith</p>
+                            <p class="message-subject" data-lang-key="messageFeedbackSubject">Subject: Feedback on monthly report</p>
+                            <p class="message-preview" data-lang-key="messageFeedbackDetail">"The monthly report was very insightful. Just had a small question about the Q3 projections..."</p>
+                            <small>1 hour ago</small>
+                            <button class="btn-modern-sm view-message-btn" data-lang-key="messageViewDetails">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button class="btn-modern" data-lang-key="modalComposeMessage">Compose Message</button>
+                <button class="btn-secondary close-modal-btn" data-lang-key="modalClose">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="myProfileModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 data-lang-key="modalMyProfileTitle">My Profile Details</h2>
+            <p><strong data-lang-key="modalName">Name:</strong> John Doe</p>
+            <p><strong data-lang-key="modalEmail">Email:</strong> john.doe@example.com</p>
+            <p><strong data-lang-key="modalRole">Role:</strong> Administrator</p>
+            <p class="modal-info-text" data-lang-key="modalMyProfileInfo">View and manage your personal profile information.</p>
+            <div class="modal-actions">
+                <button class="btn-primary close-modal-btn" data-lang-key="modalEditProfile">Edit Profile</button>
+                <button class="btn-secondary close-modal-btn" data-lang-key="modalClose">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="switchAccountModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 data-lang-key="modalSwitchAccountTitle">Switch Account</h2>
+            <p data-lang-key="modalSwitchAccountInfo">Select another account to switch to. You might need to re-authenticate.</p>
+            <div class="form-group">
+                <label for="accountSelect" data-lang-key="modalSelectAccount">Select Account</label>
+                <select id="accountSelect">
+                    <option value="account1">Account 1 (Main)</option>
+                    <option value="account2">Account 2 (Staging)</option>
+                </select>
+            </div>
+            <div class="modal-actions">
+                <button class="btn-primary" data-lang-key="modalSwitch">Switch</button>
+                <button class="btn-secondary close-modal-btn" data-lang-key="modalCancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="loginRegisterModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 data-lang-key="modalLoginRegisterTitle">Login / Register</h2>
+            <p data-lang-key="modalLoginRegisterInfo">You are currently logged in. This modal simulates redirecting to login/registration forms.</p>
+            <div class="modal-actions">
+                <button class="btn-primary" data-lang-key="modalGoToLogin">Go to Login</button>
+                <button class="btn-secondary close-modal-btn" data-lang-key="modalClose">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="logoutModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 data-lang-key="modalLogoutTitle">Confirm Logout</h2>
+            <p data-lang-key="modalLogoutConfirm">Are you sure you want to log out of DashPro?</p>
+            <div class="modal-actions">
+                <button class="btn-danger" data-lang-key="profileLogout">Log Out</button>
+                <button class="btn-secondary close-modal-btn" data-lang-key="modalCancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="toastNotification" class="toast-notification">
+        <i class="fas fa-check-circle"></i> <span></span>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <script src="assets/js/main.js"></script>
+    
+    <script src="assets/js/help.js"></script>
+</body>
+</html>
