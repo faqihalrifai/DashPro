@@ -3,7 +3,7 @@
 ---
 **Product Name:** DashPro - Modern Admin Panel Dashboard 
 **Version:** 1.0.0 
-**Author:** [Muhammad Faqih Al Rifai/Dash Pro] 
+**Author:** [Muhammad Faqih Al Rifai/DashPro] 
 **Date:** June 14, 2025 (Updated)
 ---
 
